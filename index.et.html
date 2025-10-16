@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Muuda oma toode, teenus või sündmus kaasahaaravateks videoteks">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Creatissimi Marketing">
+  <meta property="og:description" content="Muuda oma toode, teenus või sündmus kaasahaaravateks videoteks">
+  <meta property="og:url" content="https://creatissimi.eu">
+  <meta property="og:image" content="https://creatissimi.eu/creatissimi_black_on_white.svg">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter/X Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Creatissimi Marketing">
+  <meta name="twitter:description" content="Muuda oma toode, teenus või sündmus kaasahaaravateks videoteks">
+  <meta name="twitter:image" content="https://creatissimi.eu/creatissimi_black_on_white.svg">
+  <meta name="twitter:url" content="https://creatissimi.eu">
+
+  <title>Creatissimi Marketing</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_about.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://creatissimi.eu",
+      "logo": "https://creatissimi.eu/creatissimi_black_on_white.svg",
+      "name": "Creatissimi Marketing",
+      "description": "Muuda oma toode, teenus või sündmus kaasahaaravateks videoteks",
+      "email": "info@creatissimi.eu",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "EE",
+      },
+      "taxID": "17319361"
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div id="topbar" class="topbar">
+      <div class="logo">
+        <div class="title">Creatissimi Marketing</div>
+      </div>
+      <nav aria-label="Main navigation" style="display:flex;align-items:center;gap:12px">
+        <a class="navlink" href="#about">Teenused</a>
+        <a class="navlink" href="index.en.html"
+          hreflang="en">EN</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero-caption">
+    <div style="font-weight:700">Muuda oma toode, teenus või sündmus kaasahaaravateks videoteks</div>
+  </div>
+  <!-- spacing -->
+  <div style="height:18px"></div>
+
+  <div class="wrap-section">
+    <!-- Tiles (desktop grid) -->
+    <section class="tiles-wrap" aria-label="Tiles">
+      <div class="tiles" id="tilesGrid">
+        <!-- Tile 1 -->
+        <div class="tile" tabindex="0" title="Toote demo">
+          <div class="video-wrap video-wrap--right">
+            <video muted preload="metadata" playsinline loop>
+              <source src="prillid.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="overlay">
+            <div class="title">Toote demo</div>
+          </div>
+        </div>
+
+        <!-- Tile 2 -->
+        <div class="tile" tabindex="0" title="Kõrgem Kunstikool Pallas, fotograaf Kaimar Tauri Tamm">
+          <div class="video-wrap video-wrap--left">
+            <video muted preload="metadata" playsinline loop>
+              <source src="photoshoot.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="overlay">
+            <div class="title">Kõrgem Kunstikool Pallas, fotograaf Kaimar Tauri Tamm</div>
+          </div>
+        </div>
+
+        <!-- Tile 3 -->
+        <div class="tile" tabindex="0" title="Tartu Poksiklubi">
+          <div class="video-wrap video-wrap--right">
+            <video muted preload="metadata" playsinline loop>
+              <source src="poks.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="overlay">
+            <div class="title">Tartu Poksiklubi</div>
+          </div>
+        </div>
+
+        <!-- Tile 3 -->
+        <div class="tile" tabindex="0" title="Padel Tartu Hispaania laager">
+          <div class="video-wrap video-wrap--right">
+            <video muted preload="metadata" playsinline loop>
+              <source src="padel.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="overlay">
+            <div class="title">Padel Tartu Hispaania laager</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel for small screens -->
+      <div class="carousel" id="carousel">
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevBtn" aria-label="Eelnev">◀</button>
+          <button class="carousel-btn" id="nextBtn" aria-label="Järgnev">▶</button>
+        </div>
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-item">
+            <div class="tile">
+              <div class="portrait">
+                <video muted playsinline preload="metadata" loop>
+                  <source src="prillid.mov" type="video/mp4">
+                </video>
+              </div>
+              <div class="overlay">
+                <div>
+                  <div class="title">Toote demo</div>
+                  <div class="muted-small">Puuduta vaatamiseks</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="tile">
+              <div class="portrait">
+                <video muted playsinline preload="metadata" loop>
+                  <source src="photoshoot.mov" type="video/mp4">
+                </video>
+              </div>
+              <div class="overlay">
+                <div>
+                  <div class="title">Kõrgem Kunstikool Pallas, fotograaf Kaimar Tauri Tamm</div>
+                  <div class="muted-small">Puuduta vaatamiseks</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="tile">
+              <div class="portrait">
+                <video muted playsinline preload="metadata" loop>
+                  <source src="poks.mov" type="video/mp4">
+                </video>
+              </div>
+              <div class="overlay">
+                <div>
+                  <div class="title">Tartu Poksiklubi</div>
+                  <div class="muted-small">Puuduta vaatamiseks</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="tile">
+              <div class="portrait">
+                <video muted playsinline preload="metadata" loop>
+                  <source src="padel.mov" type="video/mp4">
+                </video>
+              </div>
+              <div class="overlay">
+                <div>
+                  <div class="title">Padel Tartu Hispaania laager</div>
+                  <div class="muted-small">Puuduta vaatamiseks</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr style="border:none;height:1px;background:rgba(2,6,23,0.04);margin:26px 0;border-radius:2px">
+
+    <footer id="about">
+      <div class="card">
+        <div class="center-contact">
+          <div style="font-size:14px;color:var(--muted)">Kontakt</div>
+          <div class="contact-email">info@creatissimi.eu</div>
+        </div>
+      </div>
+      <div class="card about-grid">
+        <div class="card">
+          <h3 style="margin:0 0 8px 0; font-size: 24px;">Teenused</h3>
+          <div class="price-list">
+            <div class="price-row">
+              <div><strong>Filmimine</strong>
+                <div class="muted-small">Kaadrite jäädvustamine teie asukohas. Kasutusel on iPhone 16 Pro, Osmo Mobile 7P ja DJI Mic Mini</div>
+              </div>
+            </div>
+            <div class="price-row">
+              <div><strong>Videotöötlus</strong>
+                <div class="muted-small">Video loomine olemasolevatest või filmimisteenuse videomaterjalidest</div>
+              </div>
+            </div>
+            <div class="price-row">
+              <div><strong>Mitme video pakett</strong>
+                <div class="muted-small">Videote loomine pikema ajaperioodi jooksul</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card about-card">
+          <div class="about-inner">
+            <div class="about-text">
+              <h3 style="margin:0 0 8px 0; font-size: 24px;">Firmast</h3>
+              <p class="muted">Tere! Olen Elisabeth. Juhin enda firmat Creatissimi Marketing, mis muudab toodete, teenuste või sündmuste turundamise ägedaks protessiks nii neile, kes minu käest video tellivad, kui neile, kellele loodud sisu suunatud on. Võta ühendust!</p>
+            </div>
+
+            <div class="about-image">
+              <img src="about.jpeg" alt="Elisabeth" />
+              <p>Elisabeth Räni</p>
+              <a href="https://linkedin.com/in/elisabethr2ni" target="_blank">
+                <img style="object-fit:scale-down;" src="in.svg" alt="LinkedIn Logo" class="linkedin-icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-contacts">
+        <div class="left-contact">
+          <p>©2025 Creatissimi</p>
+        </div>
+        <div class="right-contact">
+          <p>Creatissimi Marketing OÜ</p>
+          <p>Reg. code 17319361</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Tiles hover-to-play on desktop, tap-to-play on touch
+    (function () {
+      const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+      const tiles = document.querySelectorAll('.tiles .tile');
+      const carouselTiles = document.querySelectorAll('.carousel-item .tile');
+      tiles.forEach(tile => {
+        const vid = tile.querySelector('video');
+        vid.muted = true;
+        vid.loop = true;
+        tile.addEventListener('mouseenter', () => {
+          if (isTouch) return;
+          vid.play().catch(() => { });
+        });
+        tile.addEventListener('mouseleave', () => {
+          if (isTouch) return;
+          vid.pause(); vid.currentTime = 0;
+        });
+        tile.addEventListener('click', () => {
+          if (isTouch) {
+            if (vid.paused) vid.play(); else { vid.pause(); vid.currentTime = 0; }
+          } else {
+            if (vid.paused) vid.play(); else { vid.pause(); vid.currentTime = 0; }
+          }
+        });
+      });
+
+      carouselTiles.forEach(tile => {
+        const vid = tile.querySelector('video');
+        vid.muted = true;
+        vid.loop = true;
+        tile.addEventListener('mouseenter', () => {
+          if (isTouch) return;
+          vid.play().catch(() => { });
+        });
+        tile.addEventListener('mouseleave', () => {
+          if (isTouch) return;
+          vid.pause(); vid.currentTime = 0;
+        });
+        tile.addEventListener('click', () => {
+          if (isTouch) {
+            if (vid.paused) vid.play(); else { vid.pause(); vid.currentTime = 0; }
+          } else {
+            if (vid.paused) vid.play(); else { vid.pause(); vid.currentTime = 0; }
+          }
+        });
+      });
+
+      // Carousel tap-to-play and single-play
+      const carouselTrack = document.getElementById('carouselTrack');
+      if (carouselTrack) {
+        carouselTrack.addEventListener('click', (e) => {
+          const tile = e.target.closest('.tile');
+          if (!tile) return;
+          const vid = tile.querySelector('video');
+          document.querySelectorAll('.carousel video').forEach(v => { if (v !== vid) { v.pause(); v.currentTime = 0 } });
+          if (vid.paused) { vid.play(); } else { vid.pause(); vid.currentTime = 0; }
+        });
+      }
+    })();
+
+    // Simple carousel swipe / drag and arrow controls
+    (function () {
+      const track = document.getElementById('carouselTrack');
+      const prev = document.getElementById('prevBtn');
+      const next = document.getElementById('nextBtn');
+      if (!track) return;
+
+      let isDown = false, startX = 0, scrollStart = 0;
+      track.addEventListener('pointerdown', (e) => {
+        isDown = true; track.setPointerCapture(e.pointerId);
+        startX = e.clientX; scrollStart = track.scrollLeft;
+        track.style.scrollBehavior = 'auto';
+      });
+      track.addEventListener('pointermove', (e) => {
+        if (!isDown) return;
+        const dx = startX - e.clientX;
+        track.scrollLeft = scrollStart + dx;
+      });
+      track.addEventListener('pointerup', (e) => {
+        isDown = false; track.releasePointerCapture(e.pointerId);
+        track.style.scrollBehavior = 'smooth';
+        snapToClosest();
+      });
+      track.addEventListener('pointercancel', () => {
+        isDown = false; track.style.scrollBehavior = 'smooth'; snapToClosest();
+      });
+
+      function snapToClosest() {
+        const items = Array.from(track.children);
+        const center = track.scrollLeft + track.offsetWidth / 2;
+        let closest = items[0];
+        let minDiff = Infinity;
+        items.forEach(it => {
+          const left = it.offsetLeft + it.offsetWidth / 2;
+          const diff = Math.abs(left - center);
+          if (diff < minDiff) { minDiff = diff; closest = it; }
+        });
+        // align center
+        const left = closest.offsetLeft + (closest.offsetWidth - track.offsetWidth) / 2;
+        track.scrollTo({ left: left, behavior: 'smooth' });
+      }
+
+      prev.addEventListener('click', () => {
+        moveBy(-1);
+      });
+      next.addEventListener('click', () => {
+        moveBy(1);
+      });
+
+      function moveBy(dir) {
+        const items = Array.from(track.children);
+        const center = track.scrollLeft + track.offsetWidth / 2;
+        let index = 0;
+        let minDiff = Infinity;
+        items.forEach((it, i) => {
+          const left = it.offsetLeft + it.offsetWidth / 2;
+          const diff = Math.abs(left - center);
+          if (diff < minDiff) { minDiff = diff; index = i; }
+        });
+        let target = Math.min(items.length - 1, Math.max(0, index + dir));
+        const left = items[target].offsetLeft + (items[target].offsetWidth - track.offsetWidth) / 2;
+        track.scrollTo({ left: left, behavior: 'smooth' });
+      }
+
+      // initialize to first
+      setTimeout(() => snapToClosest(), 50);
+    })();
+  </script>
+
+</body>
+
+</html>
