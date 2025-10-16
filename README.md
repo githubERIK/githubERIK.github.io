@@ -9,3 +9,9 @@
 
 <https://developers.google.com/search/docs/appearance/structured-data/organization>
 
+## Video
+
+`ffmpeg -i YOUR.mov -vcodec libx264 -acodec aac -strict -2 -movflags +faststart YOUR.mp4`
+
+`-movflags +faststart`: Optimizes the MP4 file for web usage, allowing it to start playing before the entire file is downloaded.
+
