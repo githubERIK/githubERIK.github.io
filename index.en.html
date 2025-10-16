@@ -278,6 +278,15 @@
         });
       });
 
+      function toggleVideo(vid) {
+        if (vid.paused) {
+          vid.play();
+        } else {
+          vid.pause();
+          vid.currentTime = 0;
+        }
+      }
+
       carouselTiles.forEach(tile => {
         const vid = tile.querySelector('video');
         vid.muted = true;
@@ -296,6 +305,10 @@
           } else {
             if (vid.paused) vid.play(); else { vid.pause(); vid.currentTime = 0; }
           }
+        });
+        tile.addEventListener('touchstart', (e) => {
+          e.preventDefault(); // Prevent mouse click behavior
+          toggleVideo(vid);
         });
       });
 
