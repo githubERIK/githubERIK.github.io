@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="33.999996"
+   height="33.999996"
+   viewBox="0 0 33.999996 33.999996"
+   xml:space="preserve"
+   id="svg2"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs2" />
+<g
+   style="opacity:1;fill:none;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none"
+   transform="matrix(2.81,0,0,2.81,-4.0738778e-4,-4.0738778e-4)"
+   id="g2">
+	<circle
+   cx="6.0499668"
+   cy="6.0499668"
+   r="6.0498219"
+   style="opacity:1;fill:#7143b8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.13444;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none"
+   id="circle1" />
+	<path
+   d="M 7.5738497,9.67986 H 4.5262182 c -1.1614314,0 -2.1062791,-0.9448478 -2.1062791,-2.1062792 V 4.5259494 c 0,-1.1614314 0.9448477,-2.1062792 2.1062791,-2.1062792 h 3.0476315 c 1.1615659,0 2.1064136,0.9448478 2.1064136,2.1062792 v 3.0476314 c 0,1.1614314 -0.9448477,2.1062792 -2.1064136,2.1062792 z M 4.5262182,2.9572977 c -0.8649901,0 -1.5685172,0.7036615 -1.5685172,1.5685172 V 7.5734464 C 2.9575666,8.438571 3.6612281,9.142098 4.5262182,9.142098 h 3.0476315 c 0.8649901,0 1.5686517,-0.703527 1.5686517,-1.5685172 V 4.5259494 c 0,-0.8649902 -0.7036616,-1.5685172 -1.5686517,-1.5685172 H 4.5262182 Z"
+   style="opacity:1;fill:#ffffff;fill-rule:nonzero;stroke:none;stroke-width:0.13444;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none"
+   stroke-linecap="round"
+   id="path1" />
+	<path
+   d="m 6.0498323,8.0450636 c -1.1001265,0 -1.9949624,-0.8949703 -1.9949624,-1.9949624 0,-1.1001265 0.8949703,-1.9949624 1.9949624,-1.9949624 1.0999921,0 1.9949625,0.8949703 1.9949625,1.9949624 0,1.0999921 -0.8949704,1.9949624 -1.9949625,1.9949624 z m 0,-3.4522973 c -0.8035508,0 -1.4572005,0.6536496 -1.4572005,1.4572005 0,0.8035508 0.6535153,1.4573349 1.4572005,1.4573349 0.8036853,0 1.4572005,-0.6536497 1.4572005,-1.4573349 0,-0.8036853 -0.6536497,-1.4572005 -1.4572005,-1.4572005 z"
+   style="opacity:1;fill:#ffffff;fill-rule:nonzero;stroke:none;stroke-width:0.13444;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none"
+   stroke-linecap="round"
+   id="path2" />
+	<circle
+   cx="7.979053"
+   cy="3.9861708"
+   r="0.40318704"
+   style="opacity:1;fill:#ffffff;fill-rule:nonzero;stroke:none;stroke-width:0.13444;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none"
+   id="circle2" />
+</g>
+</svg>

@@ -90,9 +90,22 @@ footer {
     width: 24px;
     height: 24px;
     transition: transform 0.2s;
+    object-fit: scale-down;
 }
 
 .linkedin-icon:hover {
+    transform: scale(1.1);
+}
+
+.instagram-icon {
+    margin-top: 10px;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+    object-fit: scale-down;
+}
+
+.instagram-icon:hover {
     transform: scale(1.1);
 }
 
@@ -125,6 +138,7 @@ footer {
 
 .footer-divider {
     margin-top: 10px;
+    margin-bottom: 10px;
     border-bottom: 1px solid black;
 }
 
@@ -135,12 +149,6 @@ footer {
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
-}
-
-
-.left-contact {
-    flex: 1;
-    text-align: left;
 }
 
 .right-contact {
@@ -155,8 +163,13 @@ footer {
     word-wrap: break-word;
 }
 
+.left-contact p {
+    margin: 0;
+}
+
 @media (max-width: 560px) {
     .footer-contacts {
+        flex-direction: column;
         justify-content: center;
         gap: 12px;
     }
@@ -166,5 +179,15 @@ footer {
         flex: 1 1 100%;
         align-items: center;
         text-align: center;
+    }
+
+    .right-contact {
+        order: 1;
+        /* Make right-contact appear first */
+    }
+
+    .left-contact {
+        order: 2;
+        /* Make left-contact appear second */
     }
 }
