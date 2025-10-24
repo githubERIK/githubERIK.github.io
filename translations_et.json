@@ -20,5 +20,6 @@
     "text_contact": "Kontakt",
     "text_about_title": "Firmast",
     "text_about": "Tere! Olen Elisabeth. Juhin enda firmat Creatissimi Marketing, mis muudab toodete, teenuste või sündmuste turundamise ägedaks protessiks nii neile, kes minu käest video tellivad, kui neile, kellele loodud sisu suunatud on. Võta ühendust!",
-    "text_reg_code": "Reg. kood"
+    "text_reg_code": "Reg. kood",
+    "text_no_html5_video": "Teie veebilehitseja ei toeta HTML5 video."
 }
