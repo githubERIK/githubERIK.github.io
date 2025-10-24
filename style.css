@@ -280,7 +280,6 @@ body {
 .carousel-item {
     flex: 0 0 76%;
     min-width: 0;
-    /* prevent overflow from content */
 }
 
 .carousel-track {
@@ -341,10 +340,6 @@ body {
 }
 
 .carousel-item {
-    flex: 0 0 72%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     max-width: 450px;
 }
 
@@ -382,11 +377,6 @@ body {
 
     .carousel {
         display: block;
-        margin-top: 14px
-    }
-
-    .carousel-track {
-        padding: 12px 6px
     }
 
     .tile {
@@ -398,14 +388,6 @@ body {
         height: 100%;
         object-fit: cover;
         display: block;
-    }
-
-    .carousel-item .tile {
-        min-height: 320px
-    }
-
-    .hero-bleed {
-        box-shadow: none
     }
 }
 
