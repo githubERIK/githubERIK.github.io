@@ -67,8 +67,18 @@
         <!-- Tile 1 -->
         <div class="tile" tabindex="0" title="{{ABC:video_product_title}}">
           <div class="video-wrap video-wrap--right">
-            <video muted preload="auto" playsinline loop>
-              <source src="prillid.mp4" type="video/mp4">
+            <video muted preload="metadata" playsinline loop>
+              <source src="prillid_v_360p.mp4" type="video/mp4" media="(max-width: 640px)">
+              <source src="prillid_v_480p.mp4" type="video/mp4" media="(max-width: 854px)">
+              <source src="prillid_v_720p.mp4" type="video/mp4" media="(max-width: 1280px)">
+              <source src="prillid_v_1080p.mp4" type="video/mp4" media="(min-width: 1281px)">
+
+              <!-- Use poster attribute for initial image -->
+              <img src="prillid_360.webp" alt="{{ABC:video_product_title}} Poster 360p" media="(max-width: 640px)">
+              <img src="prillid_480.webp" alt="{{ABC:video_product_title}} Poster 480p" media="(max-width: 854px)">
+              <img src="prillid_720.webp" alt="{{ABC:video_product_title}} Poster 720p" media="(max-width: 1280px)">
+              <img src="prillid_1080.webp" alt="{{ABC:video_product_title}} Poster 1080p" media="(min-width: 1281px)">
+              Your browser does not support HTML5 video.
             </video>
           </div>
           <div class="overlay">
