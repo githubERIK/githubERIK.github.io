@@ -17,23 +17,6 @@ video,
     aspect-ratio: 9 / 16;
 }
 
-.topbar .title {
-    font-family: "Alex Brush", serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1;
-    letter-spacing: 0;
-    display: inline-block;
-    /* Base size for small screens (mobile) */
-    font-size: 1.9rem;
-    /* ≈ 30.4px if root 16px */
-    padding-right: 6px;
-    transform-origin: left center;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    color: #0f1724;
-}
-
 @media (min-width: 720px) {
     .topbar .title {
         font-size: 2.4rem;

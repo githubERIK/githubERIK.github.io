@@ -23,7 +23,7 @@
 
   <title>Creatissimi Marketing</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="preload" href="fonts/AlexBrush-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/AlexBrush-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <style>
     @font-face {
       font-family: "Alex Brush";
@@ -31,6 +31,23 @@
       font-weight: 400;
       font-style: normal;
       font-display: swap;
+    }
+
+    .topbar .title {
+      font-family: "Alex Brush", serif;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: 0;
+      display: inline-block;
+      /* Base size for small screens (mobile) */
+      font-size: 1.9rem;
+      /* ≈ 30.4px if root 16px */
+      padding-right: 6px;
+      transform-origin: left center;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      color: #0f1724;
     }
   </style>
   <link rel="stylesheet" href="style.css">
@@ -78,7 +95,8 @@
         <!-- Tile 1 -->
         <div class="tile" tabindex="0" title="{{ABC:video_product_title}}">
           <div class="video-wrap video-wrap--right">
-            <video muted preload="metadata" playsinline loop poster="videos/prillid/prillid.png_720.webp" fetchpriority="high">
+            <video muted preload="metadata" playsinline loop poster="videos/prillid/prillid.png_720.webp"
+              fetchpriority="high">
               <source src="videos/prillid/prillid.mov_360p.mp4" type="video/mp4" media="(max-width: 640px)">
               <source src="videos/prillid/prillid.mov_480p.mp4" type="video/mp4" media="(max-width: 854px)">
               <source src="videos/prillid/prillid.mov_720p.mp4" type="video/mp4" media="(max-width: 1280px)">
@@ -104,7 +122,8 @@
         <!-- Tile 2 -->
         <div class="tile" tabindex="0" title="{{ABC:video_bts_photoshoot_title}}">
           <div class="video-wrap video-wrap--left">
-            <video muted preload="metadata" playsinline loop poster="videos/photoshoot/photoshoot.png_720.webp" fetchpriority="high">
+            <video muted preload="metadata" playsinline loop poster="videos/photoshoot/photoshoot.png_720.webp"
+              fetchpriority="high">
               <source src="videos/photoshoot/photoshoot.mov_360p.mp4" type="video/mp4" media="(max-width: 640px)">
               <source src="videos/photoshoot/photoshoot.mov_480p.mp4" type="video/mp4" media="(max-width: 854px)">
               <source src="videos/photoshoot/photoshoot.mov_720p.mp4" type="video/mp4" media="(max-width: 1280px)">
@@ -129,7 +148,8 @@
         <!-- Tile 3 -->
         <div class="tile" tabindex="0" title="{{ABC:video_boxing_club_title}}">
           <div class="video-wrap video-wrap--right">
-            <video muted preload="metadata" playsinline loop poster="videos/poks/poks.png_720.webp" fetchpriority="high">
+            <video muted preload="metadata" playsinline loop poster="videos/poks/poks.png_720.webp"
+              fetchpriority="high">
               <source src="videos/poks/poks.mov_360p.mp4" type="video/mp4" media="(max-width: 640px)">
               <source src="videos/poks/poks.mov_480p.mp4" type="video/mp4" media="(max-width: 854px)">
               <source src="videos/poks/poks.mov_720p.mp4" type="video/mp4" media="(max-width: 1280px)">
@@ -154,7 +174,8 @@
         <!-- Tile 4 -->
         <div class="tile" tabindex="0" title="{{ABC:video_padel_title}}">
           <div class="video-wrap video-wrap--right">
-            <video muted preload="metadata" playsinline loop poster="videos/padel/padel.png_720.webp" fetchpriority="high">
+            <video muted preload="metadata" playsinline loop poster="videos/padel/padel.png_720.webp"
+              fetchpriority="high">
               <source src="videos/padel/padel.mov_360p.mp4" type="video/mp4" media="(max-width: 640px)">
               <source src="videos/padel/padel.mov_480p.mp4" type="video/mp4" media="(max-width: 854px)">
               <source src="videos/padel/padel.mov_720p.mp4" type="video/mp4" media="(max-width: 1280px)">
@@ -186,7 +207,8 @@
         <div class="carousel-track" id="carouselTrack">
           <div class="carousel-item">
             <div class="tile">
-              <video muted preload="metadata" playsinline loop poster="videos/prillid/prillid.png_720.webp" fetchpriority="high">
+              <video muted preload="metadata" playsinline loop poster="videos/prillid/prillid.png_720.webp"
+                fetchpriority="high">
                 <source src="videos/prillid/prillid.mov_360p.mp4" type="video/mp4" media="(max-width: 640px)">
                 <source src="videos/prillid/prillid.mov_480p.mp4" type="video/mp4" media="(max-width: 854px)">
                 <source src="videos/prillid/prillid.mov_720p.mp4" type="video/mp4" media="(max-width: 1280px)">
@@ -214,7 +236,8 @@
 
           <div class="carousel-item">
             <div class="tile">
-              <video muted preload="metadata" playsinline loop poster="videos/photoshoot/photoshoot.png_720.webp" fetchpriority="high">
+              <video muted preload="metadata" playsinline loop poster="videos/photoshoot/photoshoot.png_720.webp"
+                fetchpriority="high">
                 <source src="videos/photoshoot/photoshoot.mov_360p.mp4" type="video/mp4" media="(max-width: 640px)">
                 <source src="videos/photoshoot/photoshoot.mov_480p.mp4" type="video/mp4" media="(max-width: 854px)">
                 <source src="videos/photoshoot/photoshoot.mov_720p.mp4" type="video/mp4" media="(max-width: 1280px)">
@@ -241,7 +264,8 @@
 
           <div class="carousel-item">
             <div class="tile">
-              <video muted preload="metadata" playsinline loop poster="videos/poks/poks.png_720.webp" fetchpriority="high">
+              <video muted preload="metadata" playsinline loop poster="videos/poks/poks.png_720.webp"
+                fetchpriority="high">
                 <source src="videos/poks/poks.mov_360p.mp4" type="video/mp4" media="(max-width: 640px)">
                 <source src="videos/poks/poks.mov_480p.mp4" type="video/mp4" media="(max-width: 854px)">
                 <source src="videos/poks/poks.mov_720p.mp4" type="video/mp4" media="(max-width: 1280px)">
@@ -268,7 +292,8 @@
 
           <div class="carousel-item">
             <div class="tile">
-              <video muted preload="metadata" playsinline loop poster="videos/padel/padel.png_720.webp" fetchpriority="high">
+              <video muted preload="metadata" playsinline loop poster="videos/padel/padel.png_720.webp"
+                fetchpriority="high">
                 <source src="videos/padel/padel.mov_360p.mp4" type="video/mp4" media="(max-width: 640px)">
                 <source src="videos/padel/padel.mov_480p.mp4" type="video/mp4" media="(max-width: 854px)">
                 <source src="videos/padel/padel.mov_720p.mp4" type="video/mp4" media="(max-width: 1280px)">
