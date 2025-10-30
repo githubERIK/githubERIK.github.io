@@ -17,14 +17,6 @@ video,
     aspect-ratio: 9 / 16;
 }
 
-@font-face {
-    font-family: "Alex Brush";
-    src: url("fonts/AlexBrush-Regular.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
 .topbar .title {
     font-family: "Alex Brush", serif;
     font-weight: 400;
