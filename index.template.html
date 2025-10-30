@@ -323,7 +323,14 @@
             </div>
 
             <div class="about-image">
-              <img src="about.jpeg" alt="Elisabeth" />
+              <img srcset="images/about.jpeg_360.webp 640w,
+                      images/about.jpeg_480.webp 854w,
+                      images/about.jpeg_720.webp 1280w,
+                      images/about.jpeg_1080.webp 1920w" sizes="(max-width: 640px) 360px,
+                     (max-width: 854px) 480px,
+                     (max-width: 1280px) 720px,
+                     1080px" src="images/about.jpeg_1080.webp" alt="Elisabeth" />
+
               <p>Elisabeth Räni</p>
               <a href="https://linkedin.com/in/elisabethr2ni" target="_blank">
                 <img src="in.svg" alt="LinkedIn Logo" class="linkedin-icon" />
