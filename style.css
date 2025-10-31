@@ -240,12 +240,6 @@ body {
     display: block;
 }
 
-/* Carousel for smaller screens */
-.carousel {
-    display: none;
-    position: relative;
-}
-
 .carousel-track {
     overflow-x: auto;
     /* allow controlled scroll */
@@ -253,8 +247,22 @@ body {
 }
 
 .carousel-item {
-    flex: 0 0 76%;
-    min-width: 0;
+    flex: 0 0 400px;
+}
+
+@media (max-width: 516px) {
+    .carousel-item {
+        flex: 0 0 300px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .carousel-item {
+        flex: 1;
+    }
+    .carousel-controls {
+        display: none;
+    }
 }
 
 .carousel-track {
@@ -312,6 +320,7 @@ body {
     gap: 14px;
     align-items: center;
     padding: 12px 6px;
+    overflow-x: hidden;
 }
 
 .carousel-item {
@@ -323,6 +332,13 @@ body {
     gap: 8px;
     justify-content: center;
     margin-top: 10px;
+}
+
+
+@media (min-width: 1000px) {
+    .carousel-controls {
+        display: none;
+    }
 }
 
 .carousel-btn {
@@ -345,25 +361,20 @@ body {
     font-size: 20px
 }
 
-@media (max-width:920px) {
-    .tiles {
-        display: none
-    }
 
-    .carousel {
-        display: block;
-    }
+.carousel {
+    display: block;
+}
 
-    .tile {
-        border-radius: 14px
-    }
+.tile {
+    border-radius: 14px
+}
 
-    .tile video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
+.tile video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .muted-small {
