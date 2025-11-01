@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Transform your brand story into scroll-stopping videos">
 
   <!-- Open Graph Tags -->
@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://creatissimi.eu">
   <meta property="og:image" content="https://creatissimi.eu/creatissimi_black_on_white.svg">
   <meta property="og:type" content="website">
-  <meta property="og:logo" content="https://creatissimi.eu/creatissimi_logo_black_320_320.png" />
+  <meta property="og:logo" content="https://creatissimi.eu/creatissimi_logo_black_320_320.png">
 
   <!-- Twitter/X Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
@@ -23,6 +23,10 @@
 
   <title>Creatissimi Marketing</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preload" as="image" fetchpriority="high" href="videos/prillid/prillid.png_1080x1920.webp" />
+  <link rel="preload" as="image" fetchpriority="high" href="videos/photoshoot/photoshoot.png_1080x1920.webp" />
+  <link rel="preload" as="image" fetchpriority="high" href="videos/poks/poks.png_1080x1920.webp" />
+  <link rel="preload" as="image" fetchpriority="high" href="videos/padel/padel.png_1080x1920.webp" />
   <style>
     @font-face {
       font-family: "Alex Brush";
@@ -97,7 +101,7 @@
         <div class="carousel-track" id="carouselTrack">
           <div class="carousel-item">
             <div class="tile">
-              <video id="productDemoVideo" muted preload="metadata" playsinline loop fetchpriority="high">
+              <video id="productDemoVideo" muted preload="metadata" playsinline loop poster="videos/prillid/prillid.png_1080x1920.webp">
                 <source src="videos/prillid/prillid.mov_360x640.mp4" type="video/mp4" media="(max-height: 340px)">
                 <source src="videos/prillid/prillid.mov_480x854.mp4" type="video/mp4" media="(max-height: 554px)">
                 <source src="videos/prillid/prillid.mov_720x1280.mp4" type="video/mp4" media="(max-height: 980px)">
@@ -115,7 +119,7 @@
 
           <div class="carousel-item">
             <div class="tile">
-              <video id="photoshootVideo" muted preload="metadata" playsinline loop fetchpriority="high">
+              <video id="photoshootVideo" muted preload="metadata" playsinline loop poster="videos/photoshoot/photoshoot.png_1080x1920.webp">
                 <source src="videos/photoshoot/photoshoot.mov_360x640.mp4" type="video/mp4" media="(max-height: 340px)">
                 <source src="videos/photoshoot/photoshoot.mov_480x854.mp4" type="video/mp4" media="(max-height: 554px)">
                 <source src="videos/photoshoot/photoshoot.mov_720x1280.mp4" type="video/mp4"
@@ -135,7 +139,7 @@
 
           <div class="carousel-item">
             <div class="tile">
-              <video id="boxingVideo" muted preload="metadata" playsinline loop fetchpriority="high">
+              <video id="boxingVideo" muted preload="metadata" playsinline loop poster="videos/poks/poks.png_1080x1920.webp">
                 <source src="videos/poks/poks.mov_360x640.mp4" type="video/mp4" media="(max-height: 340px)">
                 <source src="videos/poks/poks.mov_480x854.mp4" type="video/mp4" media="(max-height: 554px)">
                 <source src="videos/poks/poks.mov_720x1280.mp4" type="video/mp4" media="(max-height: 980px)">
@@ -153,7 +157,7 @@
 
           <div class="carousel-item">
             <div class="tile">
-              <video id="padelVideo" muted preload="metadata" playsinline loop fetchpriority="high">
+              <video id="padelVideo" muted preload="metadata" playsinline loop poster="videos/padel/padel.png_1080x1920.webp">
                 <source src="videos/padel/padel.mov_360x640.mp4" type="video/mp4" media="(max-height: 340px)">
                 <source src="videos/padel/padel.mov_480x854.mp4" type="video/mp4" media="(max-height: 554px)">
                 <source src="videos/padel/padel.mov_720x1280.mp4" type="video/mp4" media="(max-height: 980px)">
@@ -241,43 +245,6 @@
       </div>
     </footer>
   </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const videos = {
-        prillid: document.getElementById('productDemoVideo'),
-        photoshoot: document.getElementById('photoshootVideo'),
-        poks: document.getElementById('boxingVideo'),
-        padel: document.getElementById('padelVideo')
-      };
-
-      const posterImages = {
-        small: '360x640',
-        medium: '480x854',
-        large: '720x1280',
-        extraLarge: '1080x1920'
-      };
-
-      function setPosterImage() {
-        const height = window.innerHeight;
-        let size = 'extraLarge'; // Default size for large screens
-
-        if (height <= 640) {
-          size = 'small';
-        } else if (height <= 854) {
-          size = 'medium';
-        } else if (height <= 1280) {
-          size = 'large';
-        }
-
-        for (const key in videos) {
-          videos[key].poster = `videos/${key}/${key}.png_${posterImages[size]}.webp`;
-        }
-      }
-
-      setPosterImage();
-      window.addEventListener('resize', setPosterImage);
-    });
-  </script>
   <script>
     // Tiles hover-to-play on desktop, tap-to-play on touch
     (function () {
