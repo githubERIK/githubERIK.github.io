@@ -247,21 +247,63 @@ body {
 }
 
 .carousel-item {
-    flex: 0 0 400px;
+    flex: 0 0 10px;
 }
 
-@media (max-width: 516px) {
+@media (max-height: 640px) {
+    .carousel-item {
+        flex: 0 0 180px;
+    }
+}
+
+/* iPhone SE */
+@media (max-width: 375px) {
+    .carousel-item {
+        flex: 0 0 280px;
+    }
+}
+
+/* iPhone 12 Pro */
+@media (max-width: 390px) and (min-height: 844px) {
+    .carousel-item {
+        flex: 0 0 260px;
+    }
+}
+
+@media (min-width: 391px) and (max-width: 700px) and (min-height: 641px) {
     .carousel-item {
         flex: 0 0 300px;
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 391px) and (max-width: 700px) and (min-height: 969px) {
+    .carousel-item {
+        flex: 0 0 390px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 900px) and (min-height: 641px) {
+    .carousel-item {
+        flex: 0 0 300px;
+    }
+}
+
+
+@media (min-width: 701px) and (max-width: 900px) and (min-height: 969px) {
+    .carousel-item {
+        flex: 0 0 490px;
+    }
+}
+
+@media (min-width: 901px) and (min-height: 641px) {
+    .carousel-item {
+        flex: 0 0 320px;
+    }
+}
+
+@media (min-width: 901px) and (min-height: 725px) {
     .carousel-item {
         flex: 1;
-    }
-    .carousel-controls {
-        display: none;
     }
 }
 
@@ -323,10 +365,6 @@ body {
     overflow-x: hidden;
 }
 
-.carousel-item {
-    max-width: 450px;
-}
-
 .carousel-controls {
     display: flex;
     gap: 8px;
@@ -335,7 +373,7 @@ body {
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 901px) {
     .carousel-controls {
         display: none;
     }
