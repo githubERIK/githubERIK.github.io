@@ -32,26 +32,30 @@
     @font-face {
       font-family: "Alex Brush";
       src: url("fonts/subsetAlexBrush.woff2") format("woff2");
-      font-weight: 400;
-      font-style: normal;
       font-display: swap;
     }
 
     .topbar .title {
       font-family: "Alex Brush", serif;
-      font-weight: 400;
-      font-style: normal;
-      line-height: 1;
-      letter-spacing: 0;
-      display: inline-block;
-      /* Base size for small screens (mobile) */
+      font-weight: 600;
       font-size: 1.9rem;
-      /* ≈ 30.4px if root 16px */
       padding-right: 6px;
       transform-origin: left center;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
       color: #0f1724;
+    }
+
+    @media (min-width: 720px) {
+      .topbar .title {
+        font-size: 2.4rem;
+      }
+    }
+
+    @media (min-width: 1100px) {
+      .topbar .title {
+        font-size: 3rem;
+      }
     }
   </style>
   <link rel="stylesheet" href="style.css">
@@ -125,10 +129,8 @@
                 poster="videos/photoshoot/photoshoot.png_1080x1920.webp">
                 <source src="videos/photoshoot/photoshoot.mov_360x640.mp4" type="video/mp4" media="(height <= 340px)">
                 <source src="videos/photoshoot/photoshoot.mov_480x854.mp4" type="video/mp4" media="(height <= 554px)">
-                <source src="videos/photoshoot/photoshoot.mov_720x1280.mp4" type="video/mp4"
-                  media="(height <= 980px)">
-                <source src="videos/photoshoot/photoshoot.mov_1080x1920.mp4" type="video/mp4"
-                  media="(height > 981px)">
+                <source src="videos/photoshoot/photoshoot.mov_720x1280.mp4" type="video/mp4" media="(height <= 980px)">
+                <source src="videos/photoshoot/photoshoot.mov_1080x1920.mp4" type="video/mp4" media="(height > 981px)">
                 Your browser does not support HTML5 video.
               </video>
               <div class="overlay">

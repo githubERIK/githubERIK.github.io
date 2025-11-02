@@ -1,41 +1,3 @@
-/* Prevent overflow globally */
-html,
-body {
-    overflow-x: hidden;
-}
-
-/* Diagnose horizontal scroll offender quickly (devtools tip) Temporarily add this to highlight overflowers */
-/* * { outline: 1px solid rgba(255,0,0,0.05); } */
-
-/*Ensure no element uses fixed widths > viewport (images/videos/carousel items) Add this defensive rule:*/
-img,
-video,
-.carousel-item,
-.tile {
-    /* max-width: 100%; */
-    box-sizing: border-box;
-    aspect-ratio: 9 / 16;
-}
-
-@media (min-width: 720px) {
-    .topbar .title {
-        font-size: 2.4rem;
-        /* ≈ 38.4px */
-    }
-}
-
-@media (min-width: 1100px) {
-    .topbar .title {
-        font-size: 3rem;
-        letter-spacing: -0.5px;
-        text-shadow: 0 2px 6px rgba(15, 17, 36, 0.08);
-    }
-}
-
-.topbar {
-    gap: 12px;
-}
-
 :root {
     --bg: #f7fafc;
     --card: #ffffff;
@@ -53,8 +15,10 @@ video,
     box-sizing: border-box
 }
 
+/* Prevent overflow globally */
 html,
 body {
+    overflow-x: hidden;
     height: 100%
 }
 
@@ -74,7 +38,6 @@ body {
     margin: 28px auto;
 }
 
-/* Top bar */
 .topbar {
     display: flex;
     align-items: center;
@@ -83,31 +46,6 @@ body {
     padding: 12px 14px;
     border-radius: 12px;
     transition: box-shadow var(--transition), transform var(--transition);
-}
-
-.logo {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-.logo .mark {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, var(--accent), #3b82f6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    color: white;
-    box-shadow: 0 6px 18px rgba(124, 92, 255, 0.08);
-}
-
-.logo .title {
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    color: #0f1724
 }
 
 .navlink {
