@@ -66,8 +66,198 @@
         font-size: 3rem;
       }
     }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #ffffff, #f1f5f9);
+      line-height: 1.35;
+      padding-bottom: 80px;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 28px auto;
+    }
+
+    @media (max-width:720px) {
+
+      .wrap {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .topbar__nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .navlink {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 10px;
+      transition: all var(--transition);
+      font-size: 20px
+    }
+
+    .navlink:hover {
+      color: black;
+      background: rgba(2, 6, 23, 0.02)
+    }
+
+    .call-to-action {
+      text-align: center;
+      font-weight: 700;
+      font-size: 30px;
+    }
+
+    @media (min-width: 830px) {
+      .call-to-action {
+        font-size: 72px;
+      }
+    }
+
+    .carousel-controls {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+
+    @media (min-width: 901px) {
+      .carousel-controls {
+        display: none;
+      }
+    }
+
+    .carousel-track {
+      overflow-x: auto;
+      display: flex;
+      overflow: hidden;
+      gap: 14px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding-bottom: 6px;
+      touch-action: pan-y;
+      align-items: flex-start;
+      padding: 12px 6px;
+    }
+
+    .carousel-btn {
+      background: transparent;
+      border: 1px solid rgba(2, 6, 23, 0.06);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .carousel-item {
+      flex: 0 0 10px;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 14px;
+      position: relative;
+    }
+
+    @media (max-height: 640px) {
+      .carousel-item {
+        flex: 0 0 180px;
+      }
+    }
+
+    /* iPhone SE */
+    @media (max-width: 375px) {
+      .carousel-item {
+        flex: 0 0 280px;
+      }
+    }
+
+    /* iPhone 12 Pro */
+    @media (max-width: 390px) and (min-height: 844px) {
+      .carousel-item {
+        flex: 0 0 260px;
+      }
+    }
+
+    @media (min-width: 391px) and (max-width: 700px) and (min-height: 641px) {
+      .carousel-item {
+        flex: 0 0 300px;
+      }
+    }
+
+    @media (min-width: 391px) and (max-width: 700px) and (min-height: 969px) {
+      .carousel-item {
+        flex: 0 0 390px;
+      }
+    }
+
+    @media (min-width: 701px) and (max-width: 900px) and (min-height: 641px) {
+      .carousel-item {
+        flex: 0 0 300px;
+      }
+    }
+
+
+    @media (min-width: 701px) and (max-width: 900px) and (min-height: 969px) {
+      .carousel-item {
+        flex: 0 0 490px;
+      }
+    }
+
+    @media (min-width: 901px) and (min-height: 641px) {
+      .carousel-item {
+        flex: 0 0 320px;
+      }
+    }
+
+    @media (min-width: 901px) and (min-height: 725px) {
+      .carousel-item {
+        flex: 1;
+      }
+    }
+
+    .carousel-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .carousel-item .overlay {
+      color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: start;
+      background: linear-gradient(0deg, rgba(15, 23, 36, 0.45), transparent 15%);
+      pointer-events: none;
+      font-weight: 700;
+      padding: 12px;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 20px
+    }
+
+    .muted-small {
+      color: var(--muted);
+      font-size: 13px
+    }
   </style>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style_about.css">
   <script type="application/ld+json">
     {
@@ -97,138 +287,113 @@
     </nav>
   </div>
 
-  <div class="hero-caption">
-    <div style="font-weight:700">{{ABC:text_first_sentence}}</div>
-  </div>
-  <!-- spacing -->
-  <div style="height:18px"></div>
+  <div class="call-to-action">{{ABC:text_first_sentence}}</div>
 
-  <div class="wrap-section">
-    <main class="tiles-wrap" aria-label="Tiles">
-      <div class="carousel" id="carousel">
-        <div class="carousel-controls">
-          <button class="carousel-btn" id="prevBtn" aria-label="{{ABC:button_previous}}">◀</button>
-          <button class="carousel-btn" id="nextBtn" aria-label="{{ABC:button_next}}">▶</button>
-        </div>
-        <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-item">
-            <div class="tile">
-              <video id="productDemoVideo" muted preload="metadata" playsinline loop
-                poster="videos/prillid/prillid.png_1080x1920.webp">
-                <source src="videos/prillid/prillid.mov_360x640.mp4" type="video/mp4" media="(height <= 340px)">
-                <source src="videos/prillid/prillid.mov_480x854.mp4" type="video/mp4" media="(height <= 554px)">
-                <source src="videos/prillid/prillid.mov_720x1280.mp4" type="video/mp4" media="(height <= 980px)">
-                <source src="videos/prillid/prillid.mov_1080x1920.mp4" type="video/mp4" media="(height > 981px)">
-                {{ABC:text_no_html5_video}}
-              </video>
-              <div class="overlay">
-                <div>
-                  <div class="title">{{ABC:video_product_title}}</div>
-                  <div class="muted-small">{{ABC:text_tap_to_play}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="tile">
-              <video id="photoshootVideo" muted preload="metadata" playsinline loop
-                poster="videos/photoshoot/photoshoot.png_1080x1920.webp">
-                <source src="videos/photoshoot/photoshoot.mov_360x640.mp4" type="video/mp4" media="(height <= 340px)">
-                <source src="videos/photoshoot/photoshoot.mov_480x854.mp4" type="video/mp4" media="(height <= 554px)">
-                <source src="videos/photoshoot/photoshoot.mov_720x1280.mp4" type="video/mp4" media="(height <= 980px)">
-                <source src="videos/photoshoot/photoshoot.mov_1080x1920.mp4" type="video/mp4" media="(height > 981px)">
-                {{ABC:text_no_html5_video}}
-              </video>
-              <div class="overlay">
-                <div>
-                  <div class="title">{{ABC:video_bts_photoshoot_title}}</div>
-                  <div class="muted-small">{{ABC:text_tap_to_play}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="tile">
-              <video id="boxingVideo" muted preload="metadata" playsinline loop
-                poster="videos/poks/poks.png_1080x1920.webp">
-                <source src="videos/poks/poks.mov_360x640.mp4" type="video/mp4" media="(height <= 340px)">
-                <source src="videos/poks/poks.mov_480x854.mp4" type="video/mp4" media="(height <= 554px)">
-                <source src="videos/poks/poks.mov_720x1280.mp4" type="video/mp4" media="(height <= 980px)">
-                <source src="videos/poks/poks.mov_1080x1920.mp4" type="video/mp4" media="(height > 981px)">
-                {{ABC:text_no_html5_video}}
-              </video>
-              <div class="overlay">
-                <div>
-                  <div class="title">{{ABC:video_boxing_club_title}}</div>
-                  <div class="muted-small">{{ABC:text_tap_to_play}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="tile">
-              <video id="padelVideo" muted preload="metadata" playsinline loop
-                poster="videos/padel/padel.png_1080x1920.webp">
-                <source src="videos/padel/padel.mov_360x640.mp4" type="video/mp4" media="(height <= 340px)">
-                <source src="videos/padel/padel.mov_480x854.mp4" type="video/mp4" media="(height <= 554px)">
-                <source src="videos/padel/padel.mov_720x1280.mp4" type="video/mp4" media="(height <= 980px)">
-                <source src="videos/padel/padel.mov_1080x1920.mp4" type="video/mp4" media="(height > 981px)">
-                {{ABC:text_no_html5_video}}
-              </video>
-              <div class="overlay">
-                <div>
-                  <div class="title">{{ABC:video_padel_title}}</div>
-                  <div class="muted-small">{{ABC:text_tap_to_play}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <main class="carousel" id="carousel" aria-label="Marketing Videos">
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="prevBtn" aria-label="{{ABC:button_previous}}">◀</button>
+      <button class="carousel-btn" id="nextBtn" aria-label="{{ABC:button_next}}">▶</button>
+    </div>
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-item">
+        <video id="productDemoVideo" muted preload="metadata" playsinline loop
+          poster="videos/prillid/prillid.png_1080x1920.webp">
+          <source src="videos/prillid/prillid.mov_360x640.mp4" type="video/mp4" media="(height <= 340px)">
+          <source src="videos/prillid/prillid.mov_480x854.mp4" type="video/mp4" media="(height <= 554px)">
+          <source src="videos/prillid/prillid.mov_720x1280.mp4" type="video/mp4" media="(height <= 980px)">
+          <source src="videos/prillid/prillid.mov_1080x1920.mp4" type="video/mp4" media="(height > 981px)">
+          {{ABC:text_no_html5_video}}
+        </video>
+        <div class="overlay">
+          <div class="title">{{ABC:video_product_title}}</div>
+          <div class="muted-small">{{ABC:text_tap_to_play}}</div>
         </div>
       </div>
-    </main>
 
-    <hr style="border:none;height:1px;background:rgba(2,6,23,0.04);margin:26px 0;border-radius:2px">
+      <div class="carousel-item">
+        <video id="photoshootVideo" muted preload="metadata" playsinline loop
+          poster="videos/photoshoot/photoshoot.png_1080x1920.webp">
+          <source src="videos/photoshoot/photoshoot.mov_360x640.mp4" type="video/mp4" media="(height <= 340px)">
+          <source src="videos/photoshoot/photoshoot.mov_480x854.mp4" type="video/mp4" media="(height <= 554px)">
+          <source src="videos/photoshoot/photoshoot.mov_720x1280.mp4" type="video/mp4" media="(height <= 980px)">
+          <source src="videos/photoshoot/photoshoot.mov_1080x1920.mp4" type="video/mp4" media="(height > 981px)">
+          {{ABC:text_no_html5_video}}
+        </video>
+        <div class="overlay">
+          <div class="title">{{ABC:video_bts_photoshoot_title}}</div>
+          <div class="muted-small">{{ABC:text_tap_to_play}}</div>
+        </div>
+      </div>
 
-    <footer id="about">
+      <div class="carousel-item">
+        <video id="boxingVideo" muted preload="metadata" playsinline loop poster="videos/poks/poks.png_1080x1920.webp">
+          <source src="videos/poks/poks.mov_360x640.mp4" type="video/mp4" media="(height <= 340px)">
+          <source src="videos/poks/poks.mov_480x854.mp4" type="video/mp4" media="(height <= 554px)">
+          <source src="videos/poks/poks.mov_720x1280.mp4" type="video/mp4" media="(height <= 980px)">
+          <source src="videos/poks/poks.mov_1080x1920.mp4" type="video/mp4" media="(height > 981px)">
+          {{ABC:text_no_html5_video}}
+        </video>
+        <div class="overlay">
+          <div class="title">{{ABC:video_boxing_club_title}}</div>
+          <div class="muted-small">{{ABC:text_tap_to_play}}</div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <video id="padelVideo" muted preload="metadata" playsinline loop poster="videos/padel/padel.png_1080x1920.webp">
+          <source src="videos/padel/padel.mov_360x640.mp4" type="video/mp4" media="(height <= 340px)">
+          <source src="videos/padel/padel.mov_480x854.mp4" type="video/mp4" media="(height <= 554px)">
+          <source src="videos/padel/padel.mov_720x1280.mp4" type="video/mp4" media="(height <= 980px)">
+          <source src="videos/padel/padel.mov_1080x1920.mp4" type="video/mp4" media="(height > 981px)">
+          {{ABC:text_no_html5_video}}
+        </video>
+        <div class="overlay">
+          <div class="title">{{ABC:video_padel_title}}</div>
+          <div class="muted-small">{{ABC:text_tap_to_play}}</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <hr style="border:none;height:1px;background:rgba(2,6,23,0.04);margin:26px 0;border-radius:2px">
+
+  <footer id="about">
+    <div class="card">
+      <div class="center-contact">
+        <div style="font-size:14px;color:var(--muted)">{{ABC:text_contact}}</div>
+        <div class="contact-email">info@creatissimi.eu</div>
+      </div>
+    </div>
+    <div class="card about-grid">
       <div class="card">
-        <div class="center-contact">
-          <div style="font-size:14px;color:var(--muted)">{{ABC:text_contact}}</div>
-          <div class="contact-email">info@creatissimi.eu</div>
-        </div>
-      </div>
-      <div class="card about-grid">
-        <div class="card">
-          <h3 style="margin:0 0 8px 0; font-size: 24px;">{{ABC:button_offers}}</h3>
-          <div class="price-list">
-            <div class="price-row">
-              <div><strong>{{ABC:text_filming_title}}</strong>
-                <div class="muted-small">{{ABC:text_filming_explained}}</div>
-              </div>
+        <h3 style="margin:0 0 8px 0; font-size: 24px;">{{ABC:button_offers}}</h3>
+        <div class="price-list">
+          <div class="price-row">
+            <div><strong>{{ABC:text_filming_title}}</strong>
+              <div class="muted-small">{{ABC:text_filming_explained}}</div>
             </div>
-            <div class="price-row">
-              <div><strong>{{ABC:text_edit_clips_title}}</strong>
-                <div class="muted-small">{{ABC:text_edit_clips_explained}}</div>
-              </div>
+          </div>
+          <div class="price-row">
+            <div><strong>{{ABC:text_edit_clips_title}}</strong>
+              <div class="muted-small">{{ABC:text_edit_clips_explained}}</div>
             </div>
-            <div class="price-row">
-              <div><strong>{{ABC:text_multi_video_title}}</strong>
-                <div class="muted-small">{{ABC:text_multi_video_explained}}</div>
-              </div>
+          </div>
+          <div class="price-row">
+            <div><strong>{{ABC:text_multi_video_title}}</strong>
+              <div class="muted-small">{{ABC:text_multi_video_explained}}</div>
             </div>
           </div>
         </div>
-        <div class="card about-card">
-          <div class="about-inner">
-            <div class="about-text">
-              <h3 style="margin:0 0 8px 0; font-size: 24px;">{{ABC:text_about_title}}</h3>
-              <p class="muted">{{ABC:text_about}}</p>
-            </div>
+      </div>
+      <div class="card about-card">
+        <div class="about-inner">
+          <div class="about-text">
+            <h3 style="margin:0 0 8px 0; font-size: 24px;">{{ABC:text_about_title}}</h3>
+            <p class="muted">{{ABC:text_about}}</p>
+          </div>
 
-            <div class="about-image">
-              <img srcset="images/about.jpeg_360.webp 640w,
+          <div class="about-image">
+            <img srcset="images/about.jpeg_360.webp 640w,
                       images/about.jpeg_480.webp 854w,
                       images/about.jpeg_720.webp 1280w,
                       images/about.jpeg_1080.webp 1920w" sizes="(max-width: 640px) 360px,
@@ -236,34 +401,32 @@
                      (max-width: 1280px) 720px,
                      1080px" src="images/about.jpeg_1080.webp" alt="Elisabeth">
 
-              <p>Elisabeth Räni</p>
-              <a href="https://linkedin.com/in/elisabethr2ni" target="_blank">
-                <img src="in.svg" alt="LinkedIn Logo" class="linkedin-icon">
-              </a>
-            </div>
+            <p>Elisabeth Räni</p>
+            <a href="https://linkedin.com/in/elisabethr2ni" target="_blank">
+              <img src="in.svg" alt="LinkedIn Logo" class="linkedin-icon">
+            </a>
           </div>
         </div>
       </div>
-      <div class="footer-divider"></div>
-      <div class="footer-contacts">
-        <div class="left-contact">
-          <a href="https://instagram.com/creatissimi_marketing/" target="_blank">
-            <img src="insta.svg" alt="Instagram Logo" class="instagram-icon">
-          </a>
-          <p>©2025 Creatissimi</p>
-        </div>
-        <div class="right-contact">
-          <p>Creatissimi Marketing OÜ</p>
-          <p>{{ABC:text_reg_code}} 17319361</p>
-        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-contacts">
+      <div class="left-contact">
+        <a href="https://instagram.com/creatissimi_marketing/" target="_blank">
+          <img src="insta.svg" alt="Instagram Logo" class="instagram-icon">
+        </a>
+        <p>©2025 Creatissimi</p>
       </div>
-    </footer>
-  </div>
+      <div class="right-contact">
+        <p>Creatissimi Marketing OÜ</p>
+        <p>{{ABC:text_reg_code}} 17319361</p>
+      </div>
+    </div>
+  </footer>
   <script>
-    // Tiles hover-to-play on desktop, tap-to-play on touch
     (function () {
       const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
-      const carouselTiles = document.querySelectorAll('.carousel-item .tile');
+      const carouselTiles = document.querySelectorAll('.carousel-item');
 
       function toggleVideo(vid) {
         if (vid.paused) {
@@ -303,7 +466,7 @@
       const carouselTrack = document.getElementById('carouselTrack');
       if (carouselTrack) {
         carouselTrack.addEventListener('click', (e) => {
-          const tile = e.target.closest('.tile');
+          const tile = e.target.closest('.carousel-item');
           if (!tile) return;
           const vid = tile.querySelector('video');
           document.querySelectorAll('.carousel video').forEach(v => { if (v !== vid) { v.pause(); v.currentTime = 0 } });
