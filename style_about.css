@@ -22,23 +22,26 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 6px;
     text-align: center;
-    padding: 28px;
+}
+
+.contact-title {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    color: var(--muted);
+    margin-bottom: 0px;
 }
 
 .contact-email {
     font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
     color: var(--accent);
     font-size: 20px;
 }
 
-.contact-email.small {
-    font-size: 16px;
-}
-
 footer {
-    margin-top: 28px;
     background: transparent;
     max-width: var(--max-width);
     margin-left: auto;
@@ -49,16 +52,23 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-size: 20px;
 }
 
 .price-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     padding: 10px;
     border-radius: 10px;
     background: linear-gradient(90deg, rgba(2, 6, 23, 0.02), transparent);
+}
+
+.services-title,
+.price-title {
+    margin: 0;
+}
+
+.price-description {
+    margin: 0;
 }
 
 /* Container inside the left card: two columns on wide, stacked on small */
@@ -116,7 +126,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* Ensure the whole footer stays responsive with your existing grid */
+/* Ensure the whole stays responsive with your existing grid */
 @media (max-width: 980px) {
     .about-grid {
         grid-template-columns: 1fr;

@@ -274,14 +274,14 @@
   </script>
 </head>
 
-<body>
+<body class="wrap">
 
-  <div class="topbar wrap">
+  <div class="topbar">
     <div class="logo">
       <div class="title">Creatissimi Marketing</div>
     </div>
     <nav aria-label="Main navigation" class="topbar__nav">
-      <a class="navlink" href="#about">Teenused</a>
+      <a class="navlink" href="#services">Teenused</a>
       <a class="navlink" href="index.en.html"
         hreflang="en">EN</a>
     </nav>
@@ -289,7 +289,7 @@
 
   <div class="call-to-action">Muuda oma toode, teenus või sündmus kaasahaaravateks videoteks</div>
 
-  <main class="carousel" id="carousel" aria-label="Marketing Videos">
+  <article class="carousel" id="carousel" aria-label="Marketing Videos">
     <div class="carousel-controls">
       <button class="carousel-btn" id="prevBtn" aria-label="Eelnev">◀</button>
       <button class="carousel-btn" id="nextBtn" aria-label="Järgnev">▶</button>
@@ -353,47 +353,41 @@
         </div>
       </div>
     </div>
-  </main>
+  </article>
 
   <hr style="border:none;height:1px;background:rgba(2,6,23,0.04);margin:26px 0;border-radius:2px">
 
-  <footer id="about">
-    <div class="card">
-      <div class="center-contact">
-        <div style="font-size:14px;color:var(--muted)">Kontakt</div>
-        <div class="contact-email">info@creatissimi.eu</div>
-      </div>
-    </div>
+  <main id="services">
+    <address class="center-contact card">
+      <h2 class="contact-title">Kontakt</h2>
+      <a href="mailto:info@creatissimi.eu" class="contact-email">info@creatissimi.eu</a>
+    </address>
     <div class="card about-grid">
-      <div class="card">
-        <h3 style="margin:0 0 8px 0; font-size: 24px;">Teenused</h3>
+      <section class="card">
+        <h2 class="services-title">Teenused</h2>
         <div class="price-list">
-          <div class="price-row">
-            <div><strong>Filmimine</strong>
-              <div class="muted-small">Kaadrite jäädvustamine teie asukohas. Kasutusel on iPhone 16 Pro, Osmo Mobile 7P ja DJI Mic Mini</div>
-            </div>
-          </div>
-          <div class="price-row">
-            <div><strong>Videotöötlus</strong>
-              <div class="muted-small">Video loomine olemasolevatest või filmimisteenuse videomaterjalidest</div>
-            </div>
-          </div>
-          <div class="price-row">
-            <div><strong>Sotsmeedia konto haldus</strong>
-              <div class="muted-small">Sisuloomine ja postitamine kindla ajaperioodi jooksul</div>
-            </div>
-          </div>
-          <div class="price-row">
-            <div><strong>Pildistamine</strong>
-              <div class="muted-small">Üritusfotograaf</div>
-            </div>
-          </div>
+          <article class="price-row">
+            <h3 class="price-title">Filmimine</h3>
+            <p class="muted-small price-description">Kaadrite jäädvustamine teie asukohas. Kasutusel on iPhone 16 Pro, Osmo Mobile 7P ja DJI Mic Mini</p>
+          </article>
+          <article class="price-row">
+            <h3 class="price-title">Videotöötlus</h3>
+            <p class="muted-small price-description">Video loomine olemasolevatest või filmimisteenuse videomaterjalidest</p>
+          </article>
+          <article class="price-row">
+            <h3 class="price-title">Sotsmeedia konto haldus</h3>
+            <p class="muted-small price-description">Sisuloomine ja postitamine kindla ajaperioodi jooksul</p>
+          </article>
+          <article class="price-row">
+            <h3 class="price-title">Pildistamine</h3>
+            <p class="muted-small price-description">Üritusfotograaf</p>
+          </article>
         </div>
-      </div>
-      <div class="card about-card">
+      </section>
+      <section class="card about-card">
         <div class="about-inner">
           <div class="about-text">
-            <h3 style="margin:0 0 8px 0; font-size: 24px;">Firmast</h3>
+            <h2 class="services-title">Firmast</h2>
             <p class="muted">Tere! Olen Elisabeth. Juhin enda firmat Creatissimi Marketing, mis muudab toodete, teenuste või sündmuste turundamise ägedaks protessiks nii neile, kes minu käest video tellivad, kui neile, kellele loodud sisu suunatud on. Võta ühendust!</p>
           </div>
 
@@ -412,8 +406,10 @@
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
+  </main>
+  <footer>
     <div class="footer-divider"></div>
     <div class="footer-contacts">
       <div class="left-contact">

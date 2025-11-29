@@ -274,14 +274,14 @@
   </script>
 </head>
 
-<body>
+<body class="wrap">
 
-  <div class="topbar wrap">
+  <div class="topbar">
     <div class="logo">
       <div class="title">Creatissimi Marketing</div>
     </div>
     <nav aria-label="Main navigation" class="topbar__nav">
-      <a class="navlink" href="#about">{{ABC:button_offers}}</a>
+      <a class="navlink" href="#services">{{ABC:button_offers}}</a>
       <a class="navlink" href="index.{{ABC:button_language_code}}.html"
         hreflang="{{ABC:button_language_code}}">{{ABC:button_language}}</a>
     </nav>
@@ -289,7 +289,7 @@
 
   <div class="call-to-action">{{ABC:text_first_sentence}}</div>
 
-  <main class="carousel" id="carousel" aria-label="Marketing Videos">
+  <article class="carousel" id="carousel" aria-label="Marketing Videos">
     <div class="carousel-controls">
       <button class="carousel-btn" id="prevBtn" aria-label="{{ABC:button_previous}}">◀</button>
       <button class="carousel-btn" id="nextBtn" aria-label="{{ABC:button_next}}">▶</button>
@@ -353,47 +353,41 @@
         </div>
       </div>
     </div>
-  </main>
+  </article>
 
   <hr style="border:none;height:1px;background:rgba(2,6,23,0.04);margin:26px 0;border-radius:2px">
 
-  <footer id="about">
-    <div class="card">
-      <div class="center-contact">
-        <div style="font-size:14px;color:var(--muted)">{{ABC:text_contact}}</div>
-        <div class="contact-email">info@creatissimi.eu</div>
-      </div>
-    </div>
+  <main id="services">
+    <address class="center-contact card">
+      <h2 class="contact-title">{{ABC:text_contact}}</h2>
+      <a href="mailto:info@creatissimi.eu" class="contact-email">info@creatissimi.eu</a>
+    </address>
     <div class="card about-grid">
-      <div class="card">
-        <h3 style="margin:0 0 8px 0; font-size: 24px;">{{ABC:button_offers}}</h3>
+      <section class="card">
+        <h2 class="services-title">{{ABC:button_offers}}</h2>
         <div class="price-list">
-          <div class="price-row">
-            <div><strong>{{ABC:text_filming_title}}</strong>
-              <div class="muted-small">{{ABC:text_filming_explained}}</div>
-            </div>
-          </div>
-          <div class="price-row">
-            <div><strong>{{ABC:text_edit_clips_title}}</strong>
-              <div class="muted-small">{{ABC:text_edit_clips_explained}}</div>
-            </div>
-          </div>
-          <div class="price-row">
-            <div><strong>{{ABC:text_multi_video_title}}</strong>
-              <div class="muted-small">{{ABC:text_multi_video_explained}}</div>
-            </div>
-          </div>
-          <div class="price-row">
-            <div><strong>{{ABC:text_photo}}</strong>
-              <div class="muted-small">{{ABC:text_photo_explained}}</div>
-            </div>
-          </div>
+          <article class="price-row">
+            <h3 class="price-title">{{ABC:text_filming_title}}</h3>
+            <p class="muted-small price-description">{{ABC:text_filming_explained}}</p>
+          </article>
+          <article class="price-row">
+            <h3 class="price-title">{{ABC:text_edit_clips_title}}</h3>
+            <p class="muted-small price-description">{{ABC:text_edit_clips_explained}}</p>
+          </article>
+          <article class="price-row">
+            <h3 class="price-title">{{ABC:text_multi_video_title}}</h3>
+            <p class="muted-small price-description">{{ABC:text_multi_video_explained}}</p>
+          </article>
+          <article class="price-row">
+            <h3 class="price-title">{{ABC:text_photo}}</h3>
+            <p class="muted-small price-description">{{ABC:text_photo_explained}}</p>
+          </article>
         </div>
-      </div>
-      <div class="card about-card">
+      </section>
+      <section class="card about-card">
         <div class="about-inner">
           <div class="about-text">
-            <h3 style="margin:0 0 8px 0; font-size: 24px;">{{ABC:text_about_title}}</h3>
+            <h2 class="services-title">{{ABC:text_about_title}}</h2>
             <p class="muted">{{ABC:text_about}}</p>
           </div>
 
@@ -412,8 +406,10 @@
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
+  </main>
+  <footer>
     <div class="footer-divider"></div>
     <div class="footer-contacts">
       <div class="left-contact">

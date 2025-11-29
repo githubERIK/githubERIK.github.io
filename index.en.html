@@ -274,14 +274,14 @@
   </script>
 </head>
 
-<body>
+<body class="wrap">
 
-  <div class="topbar wrap">
+  <div class="topbar">
     <div class="logo">
       <div class="title">Creatissimi Marketing</div>
     </div>
     <nav aria-label="Main navigation" class="topbar__nav">
-      <a class="navlink" href="#about">Services</a>
+      <a class="navlink" href="#services">Services</a>
       <a class="navlink" href="index.et.html"
         hreflang="et">ET</a>
     </nav>
@@ -289,7 +289,7 @@
 
   <div class="call-to-action">Transform your brand story into scroll-stopping videos</div>
 
-  <main class="carousel" id="carousel" aria-label="Marketing Videos">
+  <article class="carousel" id="carousel" aria-label="Marketing Videos">
     <div class="carousel-controls">
       <button class="carousel-btn" id="prevBtn" aria-label="Previous">◀</button>
       <button class="carousel-btn" id="nextBtn" aria-label="Next">▶</button>
@@ -353,47 +353,41 @@
         </div>
       </div>
     </div>
-  </main>
+  </article>
 
   <hr style="border:none;height:1px;background:rgba(2,6,23,0.04);margin:26px 0;border-radius:2px">
 
-  <footer id="about">
-    <div class="card">
-      <div class="center-contact">
-        <div style="font-size:14px;color:var(--muted)">Contact</div>
-        <div class="contact-email">info@creatissimi.eu</div>
-      </div>
-    </div>
+  <main id="services">
+    <address class="center-contact card">
+      <h2 class="contact-title">Contact</h2>
+      <a href="mailto:info@creatissimi.eu" class="contact-email">info@creatissimi.eu</a>
+    </address>
     <div class="card about-grid">
-      <div class="card">
-        <h3 style="margin:0 0 8px 0; font-size: 24px;">Services</h3>
+      <section class="card">
+        <h2 class="services-title">Services</h2>
         <div class="price-list">
-          <div class="price-row">
-            <div><strong>Filming</strong>
-              <div class="muted-small">Capturing footage at your location. Using iPhone 16 Pro, Osmo Mobile 7P and DJI Mic Mini</div>
-            </div>
-          </div>
-          <div class="price-row">
-            <div><strong>Video editing</strong>
-              <div class="muted-small">Turn your pre-existing footage or filming service output into shareable videos.</div>
-            </div>
-          </div>
-          <div class="price-row">
-            <div><strong>Social media account management</strong>
-              <div class="muted-small">Creating content over a specific time period</div>
-            </div>
-          </div>
-          <div class="price-row">
-            <div><strong>Photo content</strong>
-              <div class="muted-small">Event photographer</div>
-            </div>
-          </div>
+          <article class="price-row">
+            <h3 class="price-title">Filming</h3>
+            <p class="muted-small price-description">Capturing footage at your location. Using iPhone 16 Pro, Osmo Mobile 7P and DJI Mic Mini</p>
+          </article>
+          <article class="price-row">
+            <h3 class="price-title">Video editing</h3>
+            <p class="muted-small price-description">Turn your pre-existing footage or filming service output into shareable videos.</p>
+          </article>
+          <article class="price-row">
+            <h3 class="price-title">Social media account management</h3>
+            <p class="muted-small price-description">Creating content over a specific time period</p>
+          </article>
+          <article class="price-row">
+            <h3 class="price-title">Photo content</h3>
+            <p class="muted-small price-description">Event photographer</p>
+          </article>
         </div>
-      </div>
-      <div class="card about-card">
+      </section>
+      <section class="card about-card">
         <div class="about-inner">
           <div class="about-text">
-            <h3 style="margin:0 0 8px 0; font-size: 24px;">About</h3>
+            <h2 class="services-title">About</h2>
             <p class="muted">Hi! I'm Elisabeth. I run Creatissimi Marketing, where I help businesses and event organizers promote products, services, and events with engaging video content. Reach out!</p>
           </div>
 
@@ -412,8 +406,10 @@
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
+  </main>
+  <footer>
     <div class="footer-divider"></div>
     <div class="footer-contacts">
       <div class="left-contact">
