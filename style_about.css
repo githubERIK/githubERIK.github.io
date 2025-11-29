@@ -30,7 +30,7 @@
     font-style: normal;
     font-weight: normal;
     color: var(--muted);
-    margin-bottom: 0px;
+    margin: 0;
 }
 
 .contact-email {
