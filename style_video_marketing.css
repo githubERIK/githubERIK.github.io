@@ -1,0 +1,123 @@
+:root {
+    --muted: #64748b;
+    --accent: #7c5cff;
+    color-scheme: light;
+}
+
+@font-face {
+    font-family: "Alex Brush";
+    src: url("fonts/subsetAlexBrush.woff2") format("woff2");
+    font-display: swap;
+}
+
+.topbar {
+    font-family: "Alex Brush", serif;
+    font-weight: 600;
+    font-size: 1.9rem;
+    transform-origin: left center;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: #0f1724;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.logo-title {
+    color: black;
+    text-decoration: none;
+}
+
+.logo-title:hover {
+    color: var(--accent);
+}
+
+.topbar__nav {
+    position: absolute;
+    right: 20px;
+    font-weight: normal;
+    color: var(--muted);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.navlink {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: all var(--transition);
+    font-size: 20px
+}
+
+.navlink:hover {
+    color: black;
+    background: rgba(2, 6, 23, 0.02)
+}
+
+@media (min-width: 720px) {
+    .topbar .title {
+        font-size: 2.4rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .topbar .title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .navlink {
+        font-size: 1rem;
+    }
+
+    .topbar__nav {
+        top: 10px;
+    }
+}
+
+header {
+    text-align: center;
+}
+
+body {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, #ffffff, #f1f5f9);
+    font-size: 1.2rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.last-updated {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+footer {
+    color: var(--muted);
+    padding-top: 40px;
+    padding-bottom: 500px;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.wrap {
+    max-width: 45em;
+    margin: 28px auto;
+}
+
+@media (max-width:1000px) {
+    .wrap {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}

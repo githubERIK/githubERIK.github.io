@@ -162,15 +162,25 @@ footer {
 .footer-contacts {
     display: flex;
     justify-content: space-between;
-    /* left at start, right at end */
-    align-items: center;
+    align-items: flex-start;
+    /* Align items at the start */
     gap: 16px;
     flex-wrap: wrap;
 }
 
+.left-contact {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: flex-start;
+    /* Align items to the top */
+}
+
 .right-contact {
     flex: 0 0 auto;
+    /* Maintain width */
     margin-top: 20px;
+    /* Adjust margin as necessary */
     padding: 0;
     text-align: left;
 }
@@ -184,9 +194,33 @@ footer {
     margin: 0;
 }
 
-@media (max-width: 560px) {
+/* For proper spacing below the "Resources" section */
+.footer-resources {
+    margin-bottom: 12px;
+    /* Add space below the resources section */
+}
+
+.footer-resources ul {
+    list-style-type: none;
+    /* Remove bullet points */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.footer-resources li a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-resources li a:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 760px) {
     .footer-contacts {
-        flex-direction: column;
         justify-content: center;
         gap: 12px;
     }
@@ -194,7 +228,6 @@ footer {
     .left-contact,
     .right-contact {
         flex: 1 1 100%;
-        align-items: center;
         text-align: center;
     }
 

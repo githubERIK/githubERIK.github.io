@@ -25,5 +25,8 @@
     "text_about_title": "About",
     "text_about": "Hi! I'm Elisabeth. I run Creatissimi Marketing, where I help businesses and event organizers promote products, services, and events with engaging video content. Reach out!",
     "text_reg_code": "Reg. code",
-    "text_no_html5_video": "Your browser does not support HTML5 video."
+    "text_no_html5_video": "Your browser does not support HTML5 video.",
+    "resources_title": "Resources",
+    "resource_video_marketing_link": "resources/video_marketing.html",
+    "resource_video_marketing_link_text": "Mastering Organic Video Marketing: Tips for Effective Content Creation"
 }
