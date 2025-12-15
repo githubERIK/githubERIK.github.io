@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <url>
+        <loc>https://creatissimi.eu/index.en.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="et" href="https://creatissimi.eu/index.et.html"/>
+    </url>
+
+    <url>
+        <loc>https://creatissimi.eu/index.et.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://creatissimi.eu/index.en.html"/>
+    </url>
+
+    <url>
+        <loc>https://creatissimi.eu/resources/video_marketing.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="et" href="https://creatissimi.eu/materjalid/video_marketing.html"/>
+    </url>
+
+    <url>
+        <loc>https://creatissimi.eu/materjalid/video_marketing.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://creatissimi.eu/resources/video_marketing.html"/>
+    </url>
+
+</urlset>
