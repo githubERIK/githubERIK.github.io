@@ -96,6 +96,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      line-height: 0;
     }
 
     .navlink {
@@ -116,6 +117,7 @@
       text-align: center;
       font-weight: 700;
       font-size: 30px;
+      margin: 0;
     }
 
     @media (min-width: 830px) {
@@ -285,9 +287,7 @@
 <body class="wrap">
 
   <div class="topbar">
-    <div class="logo">
-      <div class="title">Creatissimi Marketing</div>
-    </div>
+    <div class="title">Creatissimi Marketing</div>
     <nav aria-label="Main navigation" class="topbar__nav">
       <a class="navlink" href="#services">{{ABC:button_offers}}</a>
       <a class="navlink" href="index.{{ABC:button_language_code}}.html"
@@ -295,7 +295,7 @@
     </nav>
   </div>
 
-  <div class="call-to-action">{{ABC:text_first_sentence}}</div>
+  <h1 class="call-to-action">{{ABC:text_first_sentence}}</h1>
 
   <article class="carousel" id="carousel" aria-label="Marketing Videos">
     <div class="carousel-controls">
