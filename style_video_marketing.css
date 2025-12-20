@@ -123,9 +123,39 @@ footer a {
 }
 
 h1 {
-    font-size:2vw
+    font-size: 2vw
 }
 
 h2 {
-    font-size:1.55vw
+    font-size: 1.6vw
+}
+
+@media (max-width:1300px) {
+    h1 {
+        font-size: 3vw
+    }
+
+    h2 {
+        font-size: 2.5vw
+    }
+}
+
+@media (max-width:900px) {
+    h1 {
+        font-size: 4vw
+    }
+
+    h2 {
+        font-size: 3vw
+    }
+}
+
+@media (max-width:600px) {
+    h1 {
+        font-size: 7vw
+    }
+
+    h2 {
+        font-size: 6vw
+    }
 }
