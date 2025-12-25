@@ -28,5 +28,7 @@
     "text_no_html5_video": "Teie veebilehitseja ei toeta HTML5 video.",
     "resources_title": "Materjalid",
     "resource_video_marketing_link": "materjalid/video_marketing.html",
-    "resource_video_marketing_link_text": "Orgaaniline videoturundus: näpunäited tõhusaks sisuloomeks"
+    "resource_video_marketing_link_text": "Orgaaniline videoturundus: näpunäited tõhusaks sisuloomeks",
+    "resource_sports_photo_link": "materjalid/spordifoto.html",
+    "resource_sports_photo_link_text": "Särikolmnurk spordifotograafias"
 }

@@ -94,6 +94,15 @@ main {
     margin: 0;
 }
 
+main ul li a,
+main p a {
+    color: var(--accent);
+}
+
+main p {
+    text-align: justify;
+}
+
 .last-updated {
     color: var(--muted);
     font-size: 0.8rem;
