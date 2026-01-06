@@ -1,46 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <url>
-        <loc>https://creatissimi.eu/index.en.html</loc>
-        <lastmod>2025-12-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://creatissimi.eu/index.et.html</loc>
-        <lastmod>2025-12-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
     <url>
         <loc>https://creatissimi.eu/resources/video_marketing.html</loc>
         <lastmod>2025-12-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://creatissimi.eu/materjalid/video_marketing.html</loc>
         <lastmod>2025-12-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://creatissimi.eu/resources/sports_photo.html</loc>
         <lastmod>2025-12-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://creatissimi.eu/materjalid/spordifoto.html</loc>
         <lastmod>2025-12-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
+    <url>
+        <loc>https://creatissimi.eu/resources/content_calendar.html</loc>
+        <lastmod>2026-01-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://creatissimi.eu/materjalid/sisukalender.html</loc>
+        <lastmod>2026-01-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

@@ -30,5 +30,7 @@
     "resource_video_marketing_link": "materjalid/video_marketing.html",
     "resource_video_marketing_link_text": "Orgaaniline videoturundus: näpunäited tõhusaks sisuloomeks",
     "resource_sports_photo_link": "materjalid/spordifoto.html",
-    "resource_sports_photo_link_text": "Särikolmnurk spordifotograafias"
+    "resource_sports_photo_link_text": "Särikolmnurk spordifotograafias",
+    "resource_content_calendar_link": "materjalid/sisukalender.html",
+    "resource_content_calendar_link_text": "Sotsiaalmeedia sisukalender"
 }
