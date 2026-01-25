@@ -36,4 +36,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://creatissimi.eu/resources/call_to_action.html</loc>
+        <lastmod>2026-01-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://creatissimi.eu/materjalid/kutse_tegevusele.html</loc>
+        <lastmod>2026-01-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
