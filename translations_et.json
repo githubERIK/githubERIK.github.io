@@ -32,5 +32,7 @@
     "resource_sports_photo_link": "materjalid/spordifoto.html",
     "resource_sports_photo_link_text": "Särikolmnurk spordifotograafias",
     "resource_content_calendar_link": "materjalid/sisukalender.html",
-    "resource_content_calendar_link_text": "Sotsiaalmeedia sisukalender"
+    "resource_content_calendar_link_text": "Sotsiaalmeedia sisukalender",
+    "resource_cta_link": "materjalid/kutse_tegevusele.html",
+    "resource_cta_link_text": "Psühholoogia tõhusate CTA-de jaoks"
 }

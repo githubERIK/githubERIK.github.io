@@ -32,5 +32,7 @@
     "resource_sports_photo_link": "resources/sports_photo.html",
     "resource_sports_photo_link_text": "The Exposure Triangle in Sports Photography",
     "resource_content_calendar_link": "resources/content_calendar.html",
-    "resource_content_calendar_link_text": "The Power of Social Media Content Calendar"
+    "resource_content_calendar_link_text": "The Power of Social Media Content Calendar",
+    "resource_cta_link": "resources/call_to_action.html",
+    "resource_cta_link_text": "Psychology for Effective CTAs"
 }
