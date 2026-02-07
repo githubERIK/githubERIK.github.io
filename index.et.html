@@ -56,6 +56,25 @@
       color: #0f1724;
     }
 
+    .title--large {
+      display: inline-block;
+    }
+
+    .title--medium {
+      display: none;
+    }
+
+    @media screen and (max-width: 521px) {
+      .title--large {
+        display: none;
+      }
+
+      .title--medium {
+        display: inline-block;
+      }
+    }
+
+
     @media (min-width: 720px) {
       .topbar .title {
         font-size: 2.4rem;
@@ -73,6 +92,8 @@
       background: linear-gradient(180deg, #ffffff, #f1f5f9);
       line-height: 1.35;
       padding-bottom: 80px;
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .wrap {
@@ -91,6 +112,11 @@
     .topbar {
       display: flex;
       justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 100;
+      padding: 0 48px 0 48px;
     }
 
     .topbar__nav {
@@ -98,6 +124,10 @@
       align-items: center;
       gap: 12px;
       line-height: 0;
+    }
+
+    .topbar--shadow {
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px
     }
 
     .navlink {
@@ -289,10 +319,13 @@
   </script>
 </head>
 
-<body class="wrap">
+<body>
 
   <div class="topbar">
-    <div class="title">Creatissimi Marketing</div>
+    <div class="title">
+      <span class="title--large">Creatissimi Marketing</span>
+      <span class="title--medium">Creatissimi</span>
+    </div>
     <nav aria-label="Main navigation" class="topbar__nav">
       <a class="navlink" href="#services">Teenused</a>
       <a class="navlink" href="index.en.html"
@@ -300,9 +333,9 @@
     </nav>
   </div>
 
-  <h1 class="call-to-action">Muuda oma toode, teenus või sündmus kaasahaaravateks videoteks</h1>
+  <h1 class="call-to-action wrap">Muuda oma toode, teenus või sündmus kaasahaaravateks videoteks</h1>
 
-  <article class="carousel" id="carousel" aria-label="Marketing Videos">
+  <article class="carousel wrap" id="carousel" aria-label="Marketing Videos">
     <div class="carousel-controls">
       <button class="carousel-btn" id="prevBtn" aria-label="Eelnev">◀</button>
       <button class="carousel-btn" id="nextBtn" aria-label="Järgnev">▶</button>
@@ -368,9 +401,7 @@
     </div>
   </article>
 
-  <hr style="border:none;height:1px;background:rgba(2,6,23,0.04);margin:26px 0;border-radius:2px">
-
-  <main id="services">
+  <main id="services" class="wrap">
     <section class="card center-contact">
       <h2 class="contact-title">Kontakt</h2>
       <address>
@@ -424,7 +455,7 @@
       </section>
     </div>
   </main>
-  <footer>
+  <footer class="wrap">
     <div class="footer-divider"></div>
     <div class="footer-contacts">
       <div class="left-contact">
@@ -450,6 +481,16 @@
   </footer>
   <script>
     (function () {
+
+      window.addEventListener('scroll', (e) => {
+        const nav = document.querySelector('.topbar');
+        if (window.scrollY > 0) {
+          nav.classList.add("topbar--shadow");
+        } else {
+          nav.classList.remove("topbar--shadow");
+        }
+      });
+
       const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
       const carouselTiles = document.querySelectorAll('.carousel-item');
 
