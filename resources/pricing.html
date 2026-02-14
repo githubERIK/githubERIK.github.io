@@ -27,44 +27,45 @@
         <header>
             <h1>Pricing Calculator</h1>
         </header>
-        <section>
+        <div class="tab">
+            <button id="contentCreationBtn" class="tablinks active">Content Creation <span id="total">0€</span></button>
+            <button id="socialMediaManagementBtn" class="tablinks">Social Media Management</button>
+        </div>
+        <section id="contentCreation" class="tabcontent">
             <div class="wrapper">
-                <div class="box a">
-                </div>
-                <div class="box b">
+                <div class="box box--top">
                     <p>Short-form videos</p>
                     <quantity-input id="videos" name="videos" min="0" value="0"></quantity-input>
                 </div>
-                <div class="box c">
+                <div class="box">
                     <p>Sports photo shoots</p>
                     <quantity-input id="photoSport" name="photoSport" min="0" value="0"></quantity-input>
                 </div>
-                <div class="box d">
-                    <p class="d--bold">Content Creation</p>
-                    <p id="total">Total 0€</p>
-                </div>
-                <div class="box e">
+                <div class="box">
                     <p>Extra hours</p>
                     <p class="extra-hours-info">When on-site activity takes more than 1 hour</p>
                     <quantity-input id="hours" name="hours" min="0" value="0"></quantity-input>
                 </div>
-                <div class="box f">
+                <div class="box">
                     <p>Content shooting location</p>
                     <div role="radiogroup" aria-label="Content shooting location" class="location-group">
                         <button type="button" role="radio" aria-checked="true" data-value="Tartu"
                             class="loc-card selected">
-                            <span>Tartu 0€</span>
+                            Tartu 0€
                         </button>
                         <button type="button" role="radio" aria-checked="false" data-value="Võru" class="loc-card">
-                            <span>Võru 142€</span>
+                            Võru 142€
                         </button>
                         <button type="button" role="radio" aria-checked="false" data-value="Tallinn" class="loc-card">
-                            <span>Tallinn 372€</span>
+                            Tallinn 372€
                         </button>
                     </div>
                     <input type="hidden" name="location" id="location" value="Tartu">
                 </div>
             </div>
+        </section>
+        <section id="socialMediaManagement" class="tabcontent" style="display: none">
+            <p>...</p>
         </section>
     </main>
     <footer>
