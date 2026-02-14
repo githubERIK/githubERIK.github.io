@@ -46,7 +46,7 @@ function calc() {
     const contentOneTime = videosOneTime + photosSOneTime + hoursOneTime + locPrice;
     const totalFirst = contentOneTime;
 
-    totalFirstEl.textContent = 'Total ' + totalFirst + '€';
+    totalFirstEl.textContent = totalFirst + '€';
 }
 
 // listen to custom element change/input events
