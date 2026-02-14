@@ -89,9 +89,9 @@ body {
 
 main {
     display: flex;
-    justify-content: center;
     min-height: 100vh;
     margin: 0;
+    flex-direction: column;
 }
 
 main ul li a,

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Creatissimi Marketing">
+    <title>Hinnakalkulaator</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../style_resource.css">
+    <link rel="stylesheet" href="../style_calculator.css">
+
+    <link rel="alternate" hreflang="en" href="https://creatissimi.eu/resources/pricing.html">
+    <link rel="alternate" hreflang="et" href="https://creatissimi.eu/materjalid/hind.html">
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="logo">
+            <div class="title"><a href="../index.en.html" class="logo-title">Creatissimi Marketing</a></div>
+        </div>
+        <nav aria-label="Main navigation" class="topbar__nav">
+            <a class="navlink" href="../resources/pricing.html" hreflang="et">EN</a>
+        </nav>
+    </div>
+    <main class="wrap">
+        <header>
+            <h1>Hinnakalkulaator</h1>
+        </header>
+        <section>
+            <div class="wrapper">
+                <div class="box a">
+                </div>
+                <div class="box b">
+                    <p>Lühivideod</p>
+                    <quantity-input id="videos" name="videos" min="0" value="0"></quantity-input>
+                </div>
+                <div class="box c">
+                    <p>Spordifotograafia sessioonid</p>
+                    <quantity-input id="photoSport" name="photoSport" min="0" value="0"></quantity-input>
+                </div>
+                <div class="box d">
+                    <p class="d--bold">Sisuloome</p>
+                    <p id="total">Kokku 0€</p>
+                </div>
+                <div class="box e">
+                    <p>Lisatunnid</p>
+                    <p class="extra-hours-info">Kui kohapeal viibimine võtab kauem kui 1 tund</p>
+                    <quantity-input id="hours" name="hours" min="0" value="0"></quantity-input>
+                </div>
+                <div class="box f">
+                    <p>Asukohatasu</p>
+                    <div role="radiogroup" aria-label="Asukohatasu" class="location-group">
+                        <button type="button" role="radio" aria-checked="true" data-value="Tartu"
+                            class="loc-card selected">
+                            <span>Tartu 0€</span>
+                        </button>
+                        <button type="button" role="radio" aria-checked="false" data-value="Võru" class="loc-card">
+                            <span>Võru 142€</span>
+                        </button>
+                        <button type="button" role="radio" aria-checked="false" data-value="Tallinn" class="loc-card">
+                            <span>Tallinn 372€</span>
+                        </button>
+                    </div>
+                    <input type="hidden" name="location" id="location" value="Tartu">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Creatissimi Marketing pakub sotsmeedia kontode haldust ja ürituste pildistamise teenuseid. Võtke
+        julgelt ühendust aadressil <a href="mailto:info@creatissimi.eu">info@creatissimi.eu</a>.
+    </footer>
+    <script type="module" defer src="../calculator.js"></script>
+    <script type="module" defer src="../components/quantity-input.js"></script>
+</body>
+
+</html>

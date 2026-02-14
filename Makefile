@@ -18,3 +18,7 @@ image: $(file)
 	magick $(file) -resize 854x480 -quality 85 $(file)_480x854.webp
 	magick $(file) -resize 1280x720 -quality 85 $(file)_720x1280.webp
 	magick $(file) -resize 1920x1080 -quality 85 $(file)_1080x1920.webp
+
+.PHONY: serve
+serve:
+	python3 -m http.server -d . 8000

@@ -1,0 +1,138 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: [col] 1fr [col] 1fr [col] 1fr;
+    grid-template-rows: [row] auto [row] auto [row];
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(18, 24, 40, .06);
+    padding: 50px 0 50px 0;
+}
+
+.extra-hours-info {
+    margin-top: 0;
+    color: #667;
+    font-size: 10px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
+.box p {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.a {
+    grid-column: col / span 1;
+    grid-row: row 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.b {
+    grid-column: col 2 / span 2;
+    grid-row: row;
+}
+
+.c {
+    grid-column: col 2 / span 2;
+    grid-row: row 2;
+}
+
+.d {
+    grid-column: col / span 1;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+    margin-bottom: 0;
+}
+
+.d--bold {
+    font-weight: bold;
+}
+
+.d p {
+    text-align: center;
+    margin: 0 15px 0 15px;
+}
+
+.e {
+    grid-column: col 2 / span 2;
+    grid-row: row 3;
+}
+
+.f {
+    grid-column: col 2 / span 2;
+    grid-row: row 4;
+}
+
+.location-group {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin-top: .5rem
+}
+
+.loc-card {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    touch-action: manipulation
+}
+
+.loc-card.selected {
+    border-color: var(--accent);
+    box-shadow: 0 6px 18px rgba(0, 120, 212, .15);
+    background: linear-gradient(180deg, #fff, #f7fbff)
+}
+
+@media(max-width:520px) {
+    .loc-card {
+        min-width: 50%
+    }
+}
+
+@media (max-width: 550px) {
+    .wrapper {
+        padding: 24px 0;
+    }
+
+    .wrapper p,
+    .wrapper .d--bold,
+    .wrapper h1 {
+        font-size: 14px;
+    }
+
+    .wrapper .d--bold {
+        font-size: 16px;
+    }
+
+    .loc-card {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    quantity-input {
+        transform: scale(.92);
+        transform-origin: left center;
+    }
+
+    .wrapper .extra-hours-info {
+        margin-top: 0;
+        color: #667;
+        font-size: 10px;
+        padding-right: 20px;
+    }
+}
