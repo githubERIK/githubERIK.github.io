@@ -2,49 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://creatissimi.eu/resources/video_marketing.html</loc>
-        <lastmod>2026-01-25</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://creatissimi.eu/materjalid/video_marketing.html</loc>
-        <lastmod>2026-01-25</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://creatissimi.eu/resources/sports_photo.html</loc>
-        <lastmod>2026-01-31</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://creatissimi.eu/materjalid/spordifoto.html</loc>
-        <lastmod>2026-01-31</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://creatissimi.eu/resources/content_calendar.html</loc>
-        <lastmod>2026-01-06</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://creatissimi.eu/materjalid/sisukalender.html</loc>
-        <lastmod>2026-01-06</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://creatissimi.eu/resources/call_to_action.html</loc>
-        <lastmod>2026-01-25</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://creatissimi.eu/materjalid/kutse_tegevusele.html</loc>
-        <lastmod>2026-01-25</lastmod>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://creatissimi.eu/materjalid/hind.html</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://creatissimi.eu/resources/pricing.html</loc>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

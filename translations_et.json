@@ -49,5 +49,7 @@
     "resource_content_calendar_link": "materjalid/sisukalender.html",
     "resource_content_calendar_link_text": "Sotsiaalmeedia sisukalender",
     "resource_cta_link": "materjalid/kutse_tegevusele.html",
-    "resource_cta_link_text": "Psühholoogia tõhusate CTA-de jaoks"
+    "resource_cta_link_text": "Psühholoogia tõhusate CTA-de jaoks",
+    "resource_calculator_link": "materjalid/hind.html",
+    "resource_calculator_link_text": "Ava hinnakalkulaator"
 }

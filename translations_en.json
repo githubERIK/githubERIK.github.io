@@ -49,5 +49,7 @@
     "resource_content_calendar_link": "resources/content_calendar.html",
     "resource_content_calendar_link_text": "The Power of Social Media Content Calendar",
     "resource_cta_link": "resources/call_to_action.html",
-    "resource_cta_link_text": "Psychology for Effective CTAs"
+    "resource_cta_link_text": "Psychology for Effective CTAs",
+    "resource_calculator_link": "resources/pricing.html",
+    "resource_calculator_link_text": "Open pricing calculator"
 }

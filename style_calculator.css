@@ -23,7 +23,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px;
+    padding: 5px 15px 5px 15px;
 }
 
 #contentCreationBtn {
@@ -109,15 +109,6 @@
     border-color: var(--accent);
     box-shadow: 0 6px 18px rgba(0, 120, 212, .15);
     background: linear-gradient(180deg, #fff, #f7fbff)
-}
-
-
-#contentCreationBtn {
-    padding: 15px 15px 3px 15px;
-}
-
-#socialMediaManagementBtn {
-    padding: 5px 15px 5px 15px;
 }
 
 .box--top p {

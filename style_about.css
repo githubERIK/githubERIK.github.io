@@ -245,3 +245,24 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+.about-grid--inline {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.calc-button {
+    background-color: var(--accent);
+    color: white;
+    border-radius: 20px;
+    padding: 4px 10px;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+    transition: transform 0.2s;
+}
+
+.calc-button:hover {
+    transform: scale(1.1);
+}
