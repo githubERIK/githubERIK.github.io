@@ -240,4 +240,8 @@ footer {
         order: 2;
         /* Make left-contact appear second */
     }
+
+    .footer-resources li {
+        margin-bottom: 20px;
+    }
 }
