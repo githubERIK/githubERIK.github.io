@@ -29,7 +29,12 @@
         </header>
         <div class="tab">
             <button id="contentCreationBtn" class="tablinks active">Content Creation <span id="total">0€</span></button>
-            <button id="socialMediaManagementBtn" class="tablinks">Social Media Management</button>
+            <button id="socialMediaManagementBtn" class="tablinks">Sotsiaalmeedia haldus
+                <span class="managementTotals">
+                    <span id="totalSocialOneTime">0€</span>
+                    <span class="monthly">+ <span id="totalSocialMonthly">0€</span> monthly</span>
+                </span>
+            </button>
         </div>
         <section id="contentCreation" class="tabcontent">
             <div class="wrapper">
@@ -65,7 +70,54 @@
             </div>
         </section>
         <section id="socialMediaManagement" class="tabcontent" style="display: none">
-            <p>...</p>
+            <div class="wrapper">
+                <div class="box box--top">
+                    <p>Managing monthly content calendar</p>
+                    <label id="calendar" class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="box">
+                    <p>Contract fee</p>
+                    <label id="contract" class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="box">
+                    <p>Answering to DMs</p>
+                    <label id="dm" class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="box">
+                    <p>Meetings 30min</p>
+                    <quantity-input id="meetings" name="meetings" min="0" value="0"></quantity-input>
+                </div>
+                <div class="box">
+                    <p>Rebranding existing Instagram profile</p>
+                    <label id="rebrand" class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="box">
+                    <p>Establishing a new Instagram profile</p>
+                    <label id="newProfile" class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="box">
+                    <p>Communicating with sponsors</p>
+                    <label id="findSponsor" class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
