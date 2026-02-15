@@ -8,14 +8,28 @@
 
 .tab button {
     background-color: inherit;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 10px 12px;
     transition: 0.3s;
     font-size: 17px;
+    background-color: #f5f2f2;
+    border-radius: 40px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    float: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 25px;
+}
+
+#contentCreationBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Create an active/current tablink class */
@@ -24,6 +38,26 @@
     border-radius: 40px;
     border-bottom-right-radius: 0;
     color: white;
+}
+
+.tablinks {
+    display: flex;
+    flex-direction: column;
+}
+
+.tablinks .totals {
+    display: block;
+    margin-top: 4px;
+}
+
+.tablinks .monthly {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.managementTotals {
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .wrapper {
@@ -115,12 +149,20 @@
         padding-right: 20px;
     }
 
-    .tab button {
-        padding: 3px 25px 3px 25px;
+    #contentCreationBtn {
+        padding: 15px 15px 3px 15px;
+    }
+
+    #socialMediaManagementBtn {
+        padding: 5px 15px 5px 15px;
     }
 
     .box--top p {
         margin-top: 0px;
     }
 
+    .managementTotals {
+        white-space: wrap;
+        display: inline;
+    }
 }
