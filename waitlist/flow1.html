@@ -4,17 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_waitlist.css">
     <title>Welcome</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
 
 <body>
-    <div>
-        <p>Fill the form to join the waitlist of Creatissimi Marketing!</p>
-        <p>This won't take more than 1 minute.</p>
-        <p>Are you ready?</p>
-        <button id="flow-lets-go">Let's go!</button>
+    <div class="topbar">
+        <div class="logo">
+            <div class="title"><a href="../index.en.html" class="logo-title">Creatissimi Marketing</a></div>
+        </div>
     </div>
-
+    <main class="wrap">
+        <div>
+            <p>Fill the form to join the waitlist of Creatissimi Marketing!</p>
+            <p class="muted-small">This won't take more than 1 minute. Are you ready?</p>
+        </div>
+        <button id="flow-lets-go">Let's go!</button>
+    </main>
     <script>
         document.getElementById('flow-lets-go').addEventListener('click', () => {
             window.location.href = 'flow2.html';

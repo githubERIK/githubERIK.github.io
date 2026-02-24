@@ -4,15 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_waitlist.css">
     <title>Company Name</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
 
 <body>
-    <div>
-        <p>Company name?</p>
-        <input id="company-name" />
-        <button id="flow-company-name">OK</button>
+    <div class="topbar">
+        <div class="logo">
+            <div class="title"><a href="../index.en.html" class="logo-title">Creatissimi Marketing</a></div>
+        </div>
     </div>
+    <main class="wrap">
+        <div>
+            <p>Company name?</p>
+            <input id="company-name" placeholder="Type it here..." />
+        </div>
+        <button id="flow-company-name">OK</button>
+    </main>
 
     <script>
         document.getElementById('flow-company-name').addEventListener('click', () => {
