@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Email</title>
+</head>
+
+<body>
+    <div>
+        <p>Your email in the company?</p>
+        <input id="company-email" />
+        <button id="flow-company-email">OK</button>
+    </div>
+
+    <script>
+        const nextPageButton = document.getElementById('flow-company-email')
+        const validationPattern = /\S+@\S+\.\S+/;
+
+        let field = document.getElementById("company-email");
+        if (sessionStorage.getItem("email")) {
+            field.value = sessionStorage.getItem("email");
+        }
+
+        nextPageButton.addEventListener('click', () => {
+            if (field.value.match(validationPattern)) {
+                window.location.href = 'flow6.html';
+            }
+        });
+
+        field.addEventListener("change", () => {
+            if (field.value.match(validationPattern)) {
+                sessionStorage.setItem("email", field.value);
+            }
+        });
+    </script>
+</body>
+
+</html>

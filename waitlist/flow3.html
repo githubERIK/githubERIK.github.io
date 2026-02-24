@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Role</title>
+</head>
+
+<body>
+    <div>
+        <p>Your role in the company?</p>
+        <div>
+            <button id="role-founder" value="Founder/CEO">Founder/CEO</button>
+            <button id="role-manager" value="Marketing Manager">Marketing Manager</button>
+            <button id="role-assistant" value="Marketing Assistant">Marketing Assistant</button>
+            <button id="role-other" value="Other">Other</button>
+        </div>
+    </div>
+
+    <script>
+        function updateSelected(manager, assistant, founder, other) {
+            if (sessionStorage.getItem("role-id")) {
+                const value = sessionStorage.getItem("role-id");
+                const selected = "selected"
+                switch (value) {
+                    case "role-founder":
+                        manager.classList.remove(selected);
+                        assistant.classList.remove(selected);
+                        founder.classList.add(selected);
+                        other.classList.remove(selected);
+                        break;
+                    case "role-manager":
+                        manager.classList.add(selected);
+                        assistant.classList.remove(selected);
+                        founder.classList.remove(selected);
+                        other.classList.remove(selected);
+                        break;
+                    case "role-assistant":
+                        manager.classList.remove(selected);
+                        assistant.classList.add(selected);
+                        founder.classList.remove(selected);
+                        other.classList.remove(selected);
+                        break;
+                    default:
+                        manager.classList.remove(selected);
+                        assistant.classList.remove(selected);
+                        founder.classList.remove(selected);
+                        other.classList.add(selected);
+                }
+            }
+        }
+
+        function updateStorage(role) {
+            sessionStorage.setItem("role-id", role.id)
+            sessionStorage.setItem("role", role.value)
+        }
+
+        const founder = document.getElementById('role-founder');
+        const manager = document.getElementById('role-manager');
+        const assistant = document.getElementById('role-assistant');
+        const other = document.getElementById('role-other');
+
+        const nextPage = 'flow4.html';
+
+        founder.addEventListener('click', () => {
+            updateStorage(founder);
+            updateSelected(manager, assistant, founder, other);
+            window.location.href = nextPage;
+        });
+
+        manager.addEventListener('click', () => {
+            updateStorage(manager);
+            updateSelected(manager, assistant, founder, other);
+            window.location.href = nextPage;
+        });
+
+        assistant.addEventListener('click', () => {
+            updateStorage(assistant);
+            updateSelected(manager, assistant, founder, other);
+            window.location.href = nextPage;
+        });
+
+        other.addEventListener('click', () => {
+            updateStorage(other);
+            updateSelected(manager, assistant, founder, other)
+            window.location.href = nextPage;
+        });
+    </script>
+</body>
+
+</html>

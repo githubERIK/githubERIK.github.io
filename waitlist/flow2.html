@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name</title>
+</head>
+
+<body>
+    <div>
+        <p>Company name?</p>
+        <input id="company-name" />
+        <button id="flow-company-name">OK</button>
+    </div>
+
+    <script>
+        document.getElementById('flow-company-name').addEventListener('click', () => {
+            window.location.href = 'flow3.html';
+        });
+
+        let field = document.getElementById("company-name");
+
+        if (sessionStorage.getItem("company_name")) {
+            field.value = sessionStorage.getItem("company_name");
+        }
+
+        field.addEventListener("change", () => {
+            sessionStorage.setItem("company_name", field.value);
+        });
+    </script>
+</body>
+
+</html>
