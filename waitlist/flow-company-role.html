@@ -18,10 +18,10 @@
     <main class="wrap">
         <p>Your role in the company?</p>
         <div>
-            <button id="role-founder" value="Founder/CEO">Founder/CEO</button>
-            <button id="role-manager" value="Marketing Manager">Marketing Manager</button>
-            <button id="role-assistant" value="Marketing Assistant">Marketing Assistant</button>
-            <button id="role-other" value="Other">Other</button>
+            <button class="button-ghost" id="role-founder">Founder/CEO</button>
+            <button class="button-ghost" id="role-manager">Marketing Manager</button>
+            <button class="button-ghost" id="role-assistant">Marketing Assistant</button>
+            <button class="button-ghost" id="role-other">Other</button>
         </div>
     </main>
 
@@ -60,7 +60,7 @@
 
         function updateStorage(role) {
             sessionStorage.setItem("role-id", role.id)
-            sessionStorage.setItem("role", role.value)
+            sessionStorage.setItem("role", role.textContent)
         }
 
         const founder = document.getElementById('role-founder');
@@ -68,7 +68,9 @@
         const assistant = document.getElementById('role-assistant');
         const other = document.getElementById('role-other');
 
-        const nextPage = 'flow4.html';
+        updateSelected(manager, assistant, founder, other);
+
+        const nextPage = 'flow-company-web-page.html';
 
         founder.addEventListener('click', () => {
             updateStorage(founder);

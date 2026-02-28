@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_waitlist.css">
+    <title>Company Web Page</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="logo">
+            <div class="title"><a href="../index.en.html" class="logo-title">Creatissimi Marketing</a></div>
+        </div>
+    </div>
+    <main class="wrap">
+        <div>
+            <p>Company Web Page?</p>
+            <input type="url" id="company-web-page" value="https://" maxlength="100" required
+                pattern="^https:\/\/.+\.[A-Za-z]{2,63}(\/.*)?$" />
+        </div>
+        <button class="button" id="flow-company-web-page">OK</button>
+    </main>
+
+    <script>
+        const nextPageButton = document.getElementById('flow-company-web-page')
+
+        let field = document.getElementById("company-web-page");
+        if (sessionStorage.getItem("web_page")) {
+            field.value = sessionStorage.getItem("web_page");
+        }
+
+        nextPageButton.addEventListener('click', () => {
+            if (field.checkValidity()) {
+                field.classList.remove('input--error');
+                window.location.href = 'flow-company-email.html';
+            } else {
+                inputFail(field);
+            }
+        });
+
+        function inputFail(inputBox) {
+            inputBox.className = 'input--error';
+        }
+
+        field.addEventListener("input", () => {
+            field.classList.remove('input--error');
+            if (field.checkValidity()) {
+                sessionStorage.setItem("web_page", field.value);
+            } else {
+                inputFail(field);
+            };
+        });
+
+    </script>
+</body>
+
+</html>

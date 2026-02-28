@@ -18,25 +18,39 @@
     <main class="wrap">
         <div>
             <p>Company name?</p>
-            <input id="company-name" placeholder="Type it here..." />
+            <input type="text" id="company-name" placeholder="Type it here..." minlength="2" maxlength="100" required />
         </div>
-        <button id="flow-company-name">OK</button>
+        <button class="button" id="flow-company-name">OK</button>
     </main>
 
     <script>
-        document.getElementById('flow-company-name').addEventListener('click', () => {
-            window.location.href = 'flow3.html';
-        });
-
         let field = document.getElementById("company-name");
+
+        document.getElementById('flow-company-name').addEventListener('click', () => {
+            if (field.checkValidity()) {
+                field.classList.remove('input--error');
+                window.location.href = 'flow-company-role.html';
+            } else {
+                inputFail(field);
+            }
+        });
 
         if (sessionStorage.getItem("company_name")) {
             field.value = sessionStorage.getItem("company_name");
         }
 
-        field.addEventListener("change", () => {
-            sessionStorage.setItem("company_name", field.value);
+        field.addEventListener("input", () => {
+            if (field.checkValidity()) {
+                sessionStorage.setItem("company_name", field.value);
+                field.classList.remove('input--error');
+            } else {
+                inputFail(field);
+            };
         });
+
+        function inputFail(inputBox) {
+            inputBox.className = 'input--error';
+        }
     </script>
 </body>
 

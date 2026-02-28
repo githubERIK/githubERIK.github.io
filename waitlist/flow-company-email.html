@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_waitlist.css">
+    <title>Company Email</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="logo">
+            <div class="title"><a href="../index.en.html" class="logo-title">Creatissimi Marketing</a></div>
+        </div>
+    </div>
+    <main class="wrap">
+        <div>
+            <p>Your company email?</p>
+            <input type="email" id="company-email" minlength="6" maxlength="100" placeholder="name@company.eu"
+                pattern="^.+@.+\.[A-Za-z]{2,63}(\/.*)?$" required />
+        </div>
+        <button class="button" id="flow-company-email">OK</button>
+    </main>
+
+    <script>
+        const nextPageButton = document.getElementById('flow-company-email')
+        const validationPattern = /\S+@\S+\.\S+/;
+
+        let field = document.getElementById("company-email");
+        if (sessionStorage.getItem("email")) {
+            field.value = sessionStorage.getItem("email");
+        }
+
+        nextPageButton.addEventListener('click', () => {
+            if (field.checkValidity()) {
+                field.classList.remove('input--error');
+                window.location.href = 'flow-package.html';
+            } else {
+                inputFail(field);
+            };
+        });
+
+        function inputFail(inputBox) {
+            inputBox.className = 'input--error';
+        }
+
+        field.addEventListener("input", () => {
+            if (field.checkValidity()) {
+                sessionStorage.setItem("email", field.value);
+                field.classList.remove('input--error');
+            } else {
+                inputFail(field);
+            };
+        });
+    </script>
+</body>
+
+</html>

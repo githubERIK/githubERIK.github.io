@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_waitlist.css">
+    <title>Package</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="logo">
+            <div class="title"><a href="../index.en.html" class="logo-title">Creatissimi Marketing</a></div>
+        </div>
+    </div>
+    <main class="wrap">
+        <p>Your service selection</p>
+        <div>
+            <button class="button-ghost" id="package-social-media-management">
+                Social Media Management
+            </button>
+            <button class="button-ghost" id="package-content-creation">
+                Content Creation
+            </button>
+        </div>
+        <button class="button" id="flow-package">To the next page!</button>
+    </main>
+
+    <script>
+        const nextBtn = document.getElementById('flow-package');
+
+        function anySelected() {
+            return sessionStorage.getItem(managementId) === 'true'
+                || sessionStorage.getItem(contentId) === 'true';
+        }
+
+        nextBtn.addEventListener('click', (e) => {
+            if (anySelected()) {
+                window.location.href = 'flow-start-date.html';
+            } else {
+                management.classList.add('invalid');
+                content.classList.add('invalid');
+                setTimeout(() => {
+                    management.classList.remove('invalid');
+                    content.classList.remove('invalid');
+                }, 2000);
+            }
+        });
+
+        function updateSelected(managementEl, contentEl) {
+            const mg = sessionStorage.getItem('package-social-media-management') === 'true';
+            const ct = sessionStorage.getItem('package-content-creation') === 'true';
+
+            mg ? managementEl.classList.add('selected') : managementEl.classList.remove('selected');
+            ct ? contentEl.classList.add('selected') : contentEl.classList.remove('selected');
+        }
+
+        function updateStorage(key, value) {
+            sessionStorage.setItem(key, value);
+        }
+
+        const managementId = 'package-social-media-management';
+        const contentId = 'package-content-creation';
+        const management = document.getElementById(managementId);
+        const content = document.getElementById(contentId);
+
+        // ensure default values exist (optional)
+        if (sessionStorage.getItem(managementId) === null) sessionStorage.setItem(managementId, 'false');
+        if (sessionStorage.getItem(contentId) === null) sessionStorage.setItem(contentId, 'false');
+
+        // init UI from storage
+        updateSelected(management, content);
+
+        management.addEventListener('click', () => {
+            const current = sessionStorage.getItem(managementId) === 'true';
+            updateStorage(managementId, (!current).toString());
+            updateSelected(management, content);
+        });
+
+        content.addEventListener('click', () => {
+            const current = sessionStorage.getItem(contentId) === 'true';
+            updateStorage(contentId, (!current).toString());
+            updateSelected(management, content);
+        });
+    </script>
+
+</body>
+
+</html>
