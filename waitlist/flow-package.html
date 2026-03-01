@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="style_waitlist.css">
     <title>Package</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
         </div>
     </div>
     <main class="wrap">
-        <p>Your service selection</p>
+        <p class="prompt">Your service selection</p>
         <div>
             <button class="button-ghost" id="package-social-media-management">
                 Social Media Management
@@ -38,7 +38,7 @@
 
         nextBtn.addEventListener('click', (e) => {
             if (anySelected()) {
-                window.location.href = 'flow-start-date.html';
+                window.location.href = 'flow-start-time.html';
             } else {
                 management.classList.add('invalid');
                 content.classList.add('invalid');
