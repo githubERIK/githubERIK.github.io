@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="style_waitlist.css">
+    <link rel="stylesheet" href="../waitlist-common/style_waitlist.css">
     <title>Company Name</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
@@ -20,38 +20,9 @@
             <p class="prompt">Company name?</p>
             <input type="text" id="company-name" placeholder="Type it here..." minlength="2" maxlength="100" required />
         </div>
-        <button class="button" id="flow-company-name">OK</button>
+        <button class="button" id="flow-company-name" data-target="flow-company-role.html">OK</button>
     </main>
-
-    <script>
-        let field = document.getElementById("company-name");
-
-        document.getElementById('flow-company-name').addEventListener('click', () => {
-            if (field.checkValidity()) {
-                field.classList.remove('input--error');
-                window.location.href = 'flow-company-role.html';
-            } else {
-                inputFail(field);
-            }
-        });
-
-        if (sessionStorage.getItem("company_name")) {
-            field.value = sessionStorage.getItem("company_name");
-        }
-
-        field.addEventListener("input", () => {
-            if (field.checkValidity()) {
-                sessionStorage.setItem("company_name", field.value);
-                field.classList.remove('input--error');
-            } else {
-                inputFail(field);
-            };
-        });
-
-        function inputFail(inputBox) {
-            inputBox.className = 'input--error';
-        }
-    </script>
+    <script type="module" src="../waitlist-common/companyName.js"></script>
 </body>
 
 </html>

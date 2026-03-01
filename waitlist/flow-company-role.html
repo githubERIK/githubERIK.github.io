@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="style_waitlist.css">
+    <link rel="stylesheet" href="../waitlist-common/style_waitlist.css">
     <title>Company Role</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
@@ -17,85 +17,14 @@
     </div>
     <main class="wrap">
         <p class="prompt">Your role in the company?</p>
-        <div>
+        <div id="role-list" data-target="flow-company-web-page.html">
             <button class="button-ghost" id="role-founder">Founder/CEO</button>
             <button class="button-ghost" id="role-manager">Marketing Manager</button>
             <button class="button-ghost" id="role-assistant">Marketing Assistant</button>
             <button class="button-ghost" id="role-other">Other</button>
         </div>
     </main>
-
-    <script>
-        function updateSelected(manager, assistant, founder, other) {
-            if (sessionStorage.getItem("role-id")) {
-                const value = sessionStorage.getItem("role-id");
-                const selected = "selected"
-                switch (value) {
-                    case "role-founder":
-                        manager.classList.remove(selected);
-                        assistant.classList.remove(selected);
-                        founder.classList.add(selected);
-                        other.classList.remove(selected);
-                        break;
-                    case "role-manager":
-                        manager.classList.add(selected);
-                        assistant.classList.remove(selected);
-                        founder.classList.remove(selected);
-                        other.classList.remove(selected);
-                        break;
-                    case "role-assistant":
-                        manager.classList.remove(selected);
-                        assistant.classList.add(selected);
-                        founder.classList.remove(selected);
-                        other.classList.remove(selected);
-                        break;
-                    default:
-                        manager.classList.remove(selected);
-                        assistant.classList.remove(selected);
-                        founder.classList.remove(selected);
-                        other.classList.add(selected);
-                }
-            }
-        }
-
-        function updateStorage(role) {
-            sessionStorage.setItem("role-id", role.id)
-            sessionStorage.setItem("role", role.textContent)
-        }
-
-        const founder = document.getElementById('role-founder');
-        const manager = document.getElementById('role-manager');
-        const assistant = document.getElementById('role-assistant');
-        const other = document.getElementById('role-other');
-
-        updateSelected(manager, assistant, founder, other);
-
-        const nextPage = 'flow-company-web-page.html';
-
-        founder.addEventListener('click', () => {
-            updateStorage(founder);
-            updateSelected(manager, assistant, founder, other);
-            window.location.href = nextPage;
-        });
-
-        manager.addEventListener('click', () => {
-            updateStorage(manager);
-            updateSelected(manager, assistant, founder, other);
-            window.location.href = nextPage;
-        });
-
-        assistant.addEventListener('click', () => {
-            updateStorage(assistant);
-            updateSelected(manager, assistant, founder, other);
-            window.location.href = nextPage;
-        });
-
-        other.addEventListener('click', () => {
-            updateStorage(other);
-            updateSelected(manager, assistant, founder, other)
-            window.location.href = nextPage;
-        });
-    </script>
+    <script type="module" src="../waitlist-common/companyRole.js"></script>
 </body>
 
 </html>

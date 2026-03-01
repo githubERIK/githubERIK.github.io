@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../waitlist-common/style_waitlist.css">
-    <title>Company Web Page</title>
+    <title>Firma veebileht</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <link rel="alternate" hreflang="en" href="https://creatissimi.eu/waitlist/flow-company-web-page.html">
+    <link rel="alternate" hreflang="et" href="https://creatissimi.eu/ootenimekiri/voog-firma-veebileht.html">
 </head>
 
 <body>
     <div class="topbar">
         <div class="logo">
-            <div class="title"><a href="../index.en.html" class="logo-title">Creatissimi Marketing</a></div>
+            <div class="title"><a href="../index.et.html" class="logo-title">Creatissimi Marketing</a></div>
         </div>
     </div>
     <main class="wrap">
         <div>
-            <p class="prompt">Company Web Page?</p>
+            <p class="prompt">Firma veebileht?</p>
             <input type="url" id="company-web-page" value="https://" maxlength="100" required
                 pattern="^https:\/\/.+\.[A-Za-z]{2,63}(\/.*)?$" />
         </div>
-        <button class="button" id="flow-company-web-page" data-target="flow-company-email.html">OK</button>
+        <button class="button" id="flow-company-web-page" data-target="voog-firma-meil.html">OK</button>
     </main>
     <script type="module" src="../waitlist-common/companyWebPage.js"></script>
 </body>

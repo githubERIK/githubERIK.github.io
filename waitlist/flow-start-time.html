@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="style_waitlist.css">
+    <link rel="stylesheet" href="../waitlist-common/style_waitlist.css">
     <title>Start time</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
@@ -17,85 +17,14 @@
     </div>
     <main class="wrap">
         <p class="prompt">When would you like to start?</p>
-        <div>
+        <div id="start-list" data-target="finish.html">
             <button class="button-ghost" id="start-asap">ASAP</button>
             <button class="button-ghost" id="start-month">Next Month</button>
             <button class="button-ghost" id="start-quarter">Next Quarter</button>
             <button class="button-ghost" id="start-year">Next Year</button>
         </div>
     </main>
-
-    <script>
-        function updateSelected(asap, month, quarter, year) {
-            if (sessionStorage.getItem("start-id")) {
-                const value = sessionStorage.getItem("start-id");
-                const selected = "selected"
-                switch (value) {
-                    case "start-asap":
-                        month.classList.remove(selected);
-                        quarter.classList.remove(selected);
-                        asap.classList.add(selected);
-                        year.classList.remove(selected);
-                        break;
-                    case "start-month":
-                        month.classList.add(selected);
-                        quarter.classList.remove(selected);
-                        asap.classList.remove(selected);
-                        year.classList.remove(selected);
-                        break;
-                    case "start-quarter":
-                        month.classList.remove(selected);
-                        quarter.classList.add(selected);
-                        asap.classList.remove(selected);
-                        year.classList.remove(selected);
-                        break;
-                    default:
-                        month.classList.remove(selected);
-                        quarter.classList.remove(selected);
-                        asap.classList.remove(selected);
-                        year.classList.add(selected);
-                }
-            }
-        }
-
-        function updateStorage(role) {
-            sessionStorage.setItem("start-id", role.id)
-            sessionStorage.setItem("start", role.textContent)
-        }
-
-        const asap = document.getElementById('start-asap');
-        const month = document.getElementById('start-month');
-        const quarter = document.getElementById('start-quarter');
-        const year = document.getElementById('start-year');
-
-        updateSelected(asap, month, quarter, year);
-
-        const nextPage = 'finish.html';
-
-        asap.addEventListener('click', () => {
-            updateStorage(asap);
-            updateSelected(asap, month, quarter, year);
-            window.location.href = nextPage;
-        });
-
-        month.addEventListener('click', () => {
-            updateStorage(month);
-            updateSelected(asap, month, quarter, year);
-            window.location.href = nextPage;
-        });
-
-        quarter.addEventListener('click', () => {
-            updateStorage(quarter);
-            updateSelected(asap, month, quarter, year);
-            window.location.href = nextPage;
-        });
-
-        year.addEventListener('click', () => {
-            updateStorage(year);
-            updateSelected(asap, month, quarter, year)
-            window.location.href = nextPage;
-        });
-    </script>
+    <script type="module" src="../waitlist-common/startTime.js"></script>
 </body>
 
 </html>

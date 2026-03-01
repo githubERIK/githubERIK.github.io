@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../waitlist-common/style_waitlist.css">
-    <title>Company Email</title>
+    <title>Firma meiliaadress</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <link rel="alternate" hreflang="en" href="https://creatissimi.eu/waitlist/flow-company-email.html">
+    <link rel="alternate" hreflang="et" href="https://creatissimi.eu/ootenimekiri/voog-firma-meil.html">
 </head>
 
 <body>
     <div class="topbar">
         <div class="logo">
-            <div class="title"><a href="../index.en.html" class="logo-title">Creatissimi Marketing</a></div>
+            <div class="title"><a href="../index.et.html" class="logo-title">Creatissimi Marketing</a></div>
         </div>
     </div>
     <main class="wrap">
         <div>
-            <p class="prompt">Your company email?</p>
+            <p class="prompt">Kontakt e-mail?</p>
             <input type="email" id="company-email" minlength="6" maxlength="100" placeholder="name@company.eu"
                 pattern="^.+@.+\.[A-Za-z]{2,63}(\/.*)?$" required />
         </div>
-        <button class="button" id="flow-company-email" data-target="flow-package.html">OK</button>
+        <button class="button" id="flow-company-email" data-target="voog-pakett.html">OK</button>
     </main>
     <script type="module" src="../waitlist-common/companyEmail.js"></script>
 </body>

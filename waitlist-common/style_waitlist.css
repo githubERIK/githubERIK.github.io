@@ -64,6 +64,11 @@
 
 .prompt {
     font-size: var(--my-font-size);
+    text-align: center;
+}
+
+.prompt--left {
+    text-align: left;
 }
 
 .muted-small {
