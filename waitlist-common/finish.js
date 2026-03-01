@@ -82,16 +82,24 @@ export function finishFlow(selector = '#flow-i-agree') {
     }
 
     btn.addEventListener('click', () => {
-        formComplete(
-            companyName,
-            role,
-            webPage,
-            packages,
-            email,
-            startTime,
-            true,
-            btn.dataset.target
-        )
+        btn.disabled = true;
+        btn.style.display = 'none';
+
+        try {
+            formComplete(
+                companyName,
+                role,
+                webPage,
+                packages,
+                email,
+                startTime,
+                true,
+                btn.dataset.target
+            );
+        } finally {
+            btn.disabled = false;
+            btn.style.display = '';
+        }
     });
 }
 
