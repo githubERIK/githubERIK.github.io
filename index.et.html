@@ -64,7 +64,7 @@
       display: none;
     }
 
-    @media screen and (max-width: 521px) {
+    @media screen and (max-width: 789px) {
       .title--large {
         display: none;
       }
@@ -298,6 +298,47 @@
     .footer-resources h4 {
       margin-bottom: 0px;
     }
+
+    @media (max-width: 788px) {
+      .services-link {
+        display: none;
+      }
+    }
+
+    .waitlist-button {
+      background-color: var(--accent);
+      color: white;
+      border-radius: 20px;
+      padding: 14px 10px;
+      text-decoration: none;
+      margin-left: 10px;
+      transition: background-color 0.3s;
+      transition: transform 0.2s;
+    }
+
+    .waitlist-button:hover {
+      transform: scale(1.1);
+    }
+
+    .waitlist-button--contact {
+      padding: 4px 10px;
+    }
+
+    .waitlist-contact {
+      display: none;
+      margin: 20px 0 40px 0;
+    }
+
+    @media (max-width: 477px) {
+      .waitlist-button--menu {
+        display: none;
+      }
+
+      .waitlist-contact {
+        display: flex;
+        justify-content: center;
+      }
+    }
   </style>
   <link rel="stylesheet" href="style_about.css">
 
@@ -327,7 +368,8 @@
       <span class="title--medium">Creatissimi</span>
     </div>
     <nav aria-label="Main navigation" class="topbar__nav">
-      <a class="navlink" href="#services">Teenused</a>
+      <a href="ootenimekiri/alustan.html" class="waitlist-button waitlist-button--menu">Liitun ootenimekirjaga</a>
+      <a class="navlink services-link" href="#services">Teenused</a>
       <a class="navlink" href="index.en.html"
         hreflang="en">EN</a>
     </nav>
@@ -402,11 +444,16 @@
   </article>
 
   <main id="services" class="wrap">
+    <div class="waitlist-contact">
+      <a href="ootenimekiri/alustan.html" class="waitlist-button waitlist-button--contact">Liitun ootenimekirjaga</a>
+    </div>
     <section class="card center-contact">
       <h2 class="contact-title">Kontakt</h2>
-      <address>
-        <a href="mailto:info@creatissimi.eu" class="contact-email">info@creatissimi.eu</a>
-      </address>
+      <div>
+        <address>
+          <a href="mailto:info@creatissimi.eu" class="contact-email">info@creatissimi.eu</a>
+        </address>
+      </div>
     </section>
     <div class="card about-grid">
       <section class="card">
