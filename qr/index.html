@@ -26,7 +26,7 @@
             font-size: var(--my-font-size);
         }
 
-        form input[type="url"] {
+        form input[type="text"] {
             font-size: var(--my-font-size);
             width: 80%;
             text-align: center;
@@ -78,8 +78,8 @@
             <h1>QR-koodi generaator</h1>
         </header>
         <form action="/" id="qr-generation-form">
-            <input type="url" name="qr-code-content" id="qr-content" value="https://" minlength="1"
-                placeholder="Sisesta URL" autocomplete="off" pattern="^https:\/\/.+\.[A-Za-z]{2,63}(\/.*)?$" required />
+            <input type="text" name="qr-code-content" id="qr-content" placeholder="Teie link" minlength="1"
+                autocomplete="off" required />
             <input type="submit" class="gen-button" value="Genereeri" />
             <div id="qr-code"></div>
         </form>
