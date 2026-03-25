@@ -252,6 +252,7 @@ footer {
     margin: 0;
 }
 
+.qr-button,
 .calc-button {
     background-color: var(--accent);
     color: white;
@@ -263,6 +264,12 @@ footer {
     transition: transform 0.2s;
 }
 
+.qr-button,
 .calc-button:hover {
     transform: scale(1.1);
+}
+
+.qr-button {
+    font-size: 13px;
+    text-align: center;
 }

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Creatissimi Marketing">
+    <title>QR generaator</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../style_resource.css">
+
+    <style>
+        :root {
+            --my-font-size: calc(16px + 0.1rem);
+        }
+
+        main {
+            min-height: min-content;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            font-size: var(--my-font-size);
+        }
+
+        form input[type="url"] {
+            font-size: var(--my-font-size);
+            width: 80%;
+            text-align: center;
+            width: 100%;
+            border-radius: 0px;
+            border: none;
+            outline: unset;
+            -webkit-text-fill-color: currentcolor;
+            animation: 1ms ease 0s 1 normal none running native-autofill-in;
+            transition: background-color 1e+08s;
+            color: rgb(127 114 180);
+            box-shadow: rgba(186, 178, 220, 0.3) 0px 1px;
+            background-color: transparent;
+        }
+
+        .gen-button {
+            font-size: var(--my-font-size);
+            background-color: var(--accent);
+            color: white;
+            border-radius: 20px;
+            border-width: 0px;
+            padding: 4px 10px;
+            text-decoration: none;
+            margin-left: 10px;
+            transition: transform 0.2s;
+            width: min-content;
+        }
+
+        .gen-button:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            color: var(--muted);
+            padding-top: 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="logo">
+            <div class="title"><a href="../index.et.html" class="logo-title">Creatissimi Marketing</a></div>
+        </div>
+    </div>
+    <main class="wrap">
+        <header>
+            <h1>QR-koodi generaator</h1>
+        </header>
+        <form action="/" id="qr-generation-form">
+            <input type="url" name="qr-code-content" id="qr-content" value="https://" minlength="1"
+                placeholder="Sisesta URL" autocomplete="off" pattern="^https:\/\/.+\.[A-Za-z]{2,63}(\/.*)?$" required />
+            <input type="submit" class="gen-button" value="Genereeri" />
+            <div id="qr-code"></div>
+        </form>
+    </main>
+    <footer>
+        Creatissimi Marketing <a target="_blank" href="hind.html">pakub</a> sotsiaalmeedia halduse ja sisuloome
+        teenuseid. Võtke julgelt ühendust aadressil
+        <a href=" mailto:info@creatissimi.eu">info@creatissimi.eu</a>.
+
+        <p>
+            QR-koodi generaator kasutab
+            <a href="https://github.com/davidshimjs/qrcodejs/blob/master/LICENSE">MIT litsentsiga</a>
+            qrcodejs projekti, mille autoriõiguse omanik on davidshimjs.
+        </p>
+    </footer>
+    <script defer src="qrcode.min.js"></script>
+    <script>
+        const qrContentInput = document.getElementById("qr-content");
+        const form = document.getElementById("qr-generation-form");
+        let qrCode;
+
+        const createQrCode = txt => new QRCode("qr-code", {
+            text: txt, width: 256, height: 256,
+            colorDark: "#000", colorLight: "#fff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        function downloadQr(filename = "qr-code.png") {
+            const container = document.getElementById("qr-code");
+            const img = container.querySelector("img");
+            if (img && img.src) {
+                const a = document.createElement("a");
+                a.href = img.src;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                return;
+            }
+            const canvas = container.querySelector("canvas");
+            if (canvas) {
+                const dataUrl = canvas.toDataURL("image/png");
+                const a = document.createElement("a");
+                a.href = dataUrl;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+            }
+        }
+
+        form.addEventListener("submit", async e => {
+            e.preventDefault();
+            if (!form.checkValidity()) return;
+            const txt = qrContentInput.value;
+            if (qrCode) qrCode.makeCode(txt);
+            else qrCode = createQrCode(txt);
+
+            requestAnimationFrame(() => requestAnimationFrame(() => {
+                const safeName = txt.replace(/[^a-z0-9]/gi, '_').slice(0, 50) || "qr-code";
+                downloadQr(`${safeName}.png`);
+            }));
+        });
+    </script>
+
+</body>
+
+</html>
