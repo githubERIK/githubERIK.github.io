@@ -19,7 +19,7 @@ function formComplete(
     };
 
 
-    fetch('https://changelogapi.eu/vorm/forms', {
+    fetch('https://form.changelogapi.eu/forms', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
