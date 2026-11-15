@@ -56,5 +56,10 @@
     "resource_calculator_link": "resources/pricing.html",
     "resource_calculator_link_text": "Open calculator",
     "waitlist_link_text": "Join waitlist",
-    "waitlist_link": "waitlist/start.html"
+    "waitlist_link": "waitlist/start.html",
+    "customers_title": "Customers",
+    "customers_text_manage": "Managing",
+    "customers_text_social_media_1": "social media for",
+    "customers_text_social_media_2": "",
+    "customers_button_next": "Show next"
 }

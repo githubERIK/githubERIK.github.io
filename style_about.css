@@ -264,7 +264,7 @@ footer {
     transition: transform 0.2s;
 }
 
-.qr-button,
+.qr-button:hover,
 .calc-button:hover {
     transform: scale(1.1);
 }

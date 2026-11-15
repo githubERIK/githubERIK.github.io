@@ -56,5 +56,10 @@
     "resource_calculator_link": "materjalid/hind.html",
     "resource_calculator_link_text": "Avan kalkulaatori",
     "waitlist_link_text": "Liitun ootenimekirjaga",
-    "waitlist_link": "ootenimekiri/alustan.html"
+    "waitlist_link": "ootenimekiri/alustan.html",
+    "customers_title": "Kliendid",
+    "customers_text_manage": "Haldan",
+    "customers_text_social_media_1": "",
+    "customers_text_social_media_2": " sotsiaalmeediat",
+    "customers_button_next": "Näita veel"
 }
